@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+}
+.footer-partners {
+    max-height: 20px;
+    max-width: 40px;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 155px; /* .push must be the same height as .footer */
+}
