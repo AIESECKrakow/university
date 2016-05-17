@@ -9,5 +9,5 @@ A Symfony project created on May 16, 2016, 9:02 pm.
 3. User: root
 4. Password: null
 5. Create database with name: uni
-6. Create tables -> in project directory execute: php bin/console doctrine:schema:update --force
+6. Create tables -> in project directory execute: php app/console doctrine:schema:update --force
 7. Enjoy!
