@@ -59,3 +59,5 @@ c7931c,127.0.0.1,GET,http://localhost:8000/@/bout,1464032596,,404
 d99b12,127.0.0.1,GET,http://localhost:8000/,1464032607,,200
 ca008f,127.0.0.1,GET,http://localhost:8000/,1464032625,,200
 c89326,127.0.0.1,GET,http://localhost:8000/about,1464032650,,200
+3c6db6,127.0.0.1,GET,http://localhost:8000/about,1464033123,,200
+2b825f,127.0.0.1,GET,http://localhost:8000/about,1464033126,,200
