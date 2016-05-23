@@ -28,3 +28,14 @@ dcd4ac,127.0.0.1,GET,http://localhost:8000/,1463440991,,500
 a96772,::1,GET,http://localhost/aiesec/university/web/app_dev.php/,1463485805,,200
 8cb433,::1,GET,http://localhost/aiesec/university/web/app_dev.php/,1463485897,,200
 b86c4a,::1,GET,http://localhost/aiesec/university/web/app_dev.php/,1463485932,,200
+2ec2bb,127.0.0.1,GET,http://localhost:8000/price,1464030765,452dbf,200
+452dbf,127.0.0.1,GET,http://localhost:8000/price,1464030765,,500
+3263fe,127.0.0.1,GET,http://localhost:8000/price,1464030848,616bd8,200
+616bd8,127.0.0.1,GET,http://localhost:8000/price,1464030848,,500
+efd92b,127.0.0.1,GET,http://localhost:8000/price,1464030960,c57c1c,200
+c57c1c,127.0.0.1,GET,http://localhost:8000/price,1464030961,,500
+ea1b0f,127.0.0.1,GET,http://localhost:8000/price,1464031072,1aa038,200
+1aa038,127.0.0.1,GET,http://localhost:8000/price,1464031072,,500
+d7658c,127.0.0.1,GET,http://localhost:8000/price,1464031078,3bfe31,200
+3bfe31,127.0.0.1,GET,http://localhost:8000/price,1464031078,,500
+fae1da,127.0.0.1,GET,http://localhost:8000/price,1464031318,,200
