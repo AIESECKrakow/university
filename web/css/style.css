@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    margin-top: 70px;
 }
 .footer-partners {
     max-height: 20px;
