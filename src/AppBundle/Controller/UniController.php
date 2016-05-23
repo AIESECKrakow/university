@@ -2,20 +2,20 @@
 
 namespace AppBundle\Controller {
 
-    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
     use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-    class UniController
+    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+    class UniController extends Controller
     {
 
         /**
-         * @Route ("/about")
-         * @Template
+         * @Route ("/about", name="about")
+
          */
         public function aboutAction ()
         {
-            return array ();
-            $html = $this->container->get('templating')->render(
-                'Uni.html.twig',
+
+            return $this->render('default/uni_about.html.twig');
         }
-    }}
+    }
+}
