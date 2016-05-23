@@ -114,6 +114,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
+        // random
+        if ($pathinfo === '/random') {
+            return array (  '_controller' => 'AppBundle\\Controller\\RandomController::indexAction',  '_route' => 'random',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
