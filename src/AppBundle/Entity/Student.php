@@ -4,10 +4,20 @@ namespace AppBundle\Entity;
 
 use AppBundle\Entity\Group;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repositories\StudentsRepository")
  * @ORM\Table(name="students")
+ *
+ * @UniqueEntity(
+ *     fields={"email"},
+ *     message="Użytkownik o podanych adresie email już istnieje."
+ * )
+ * @UniqueEntity(
+ *     fields={"phone"},
+ *     message="Użytkownik o podanych nr telefonu już istnieje."
+ * )
  */
 
 class Student
@@ -21,6 +31,7 @@ class Student
 
     /**
      * @ORM\Column(type="string", length=20)
+     *
      */
     private $first_name;
 

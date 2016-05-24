@@ -14,6 +14,10 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Regex;
+use Symfony\Component\Validator\Constraints\Type;
 
 class DefaultController extends Controller
 {
@@ -29,8 +33,7 @@ class DefaultController extends Controller
 //        $g->setCreatedAt(new \DateTime());
 //        $g->setUpdatedAt(new \DateTime());
 //        $this->getDoctrine()->getManager()->getRepository('AppBundle:Level')->saveNewLevel($g);
-
-        // replace this example code with whatever you need
+        
         return $this->render('default/index.html.twig');
     }
 
@@ -41,10 +44,47 @@ class DefaultController extends Controller
         $student = new Student();
 
         $form = $this->createFormBuilder($student)
-            ->add('first_name', TextType::class, array('attr' => array('class' => 'form-control')))
-            ->add('last_name', TextType::class, array('attr' => array('class' => 'form-control')))
-            ->add('email', EmailType::class, array('attr' => array('class' => 'form-control')))
-            ->add('phone', TextType::class, array('attr' => array('class' => 'form-control')))
+            ->add('first_name', TextType::class, array(
+                'constraints' => array(
+                    new NotBlank(),
+                    new Regex(array(
+                        'pattern' => '/\d/',
+                        'match' => false,
+                        'message' => 'Imię nie może zawierać cyfr.'
+                    ))
+                    ),
+                'label' => 'Imię',
+                'attr' => array('class' => 'form-control')
+            ))
+            ->add('last_name', TextType::class, array(
+                'constraints' => array(
+                    new Regex(array(
+                        'pattern' => '/\d/',
+                        'match' => false,
+                        'message' => 'Nazwisko nie może zawierać cyfr.'
+                    )),
+                    new NotBlank(),
+                    new Type('string')
+                ),
+                'label' => 'Nazwisko',
+                'attr' => array('class' => 'form-control')))
+            ->add('email', EmailType::class, array(
+                'constraints' => array(
+                    new NotBlank(),
+                    new Email()
+                ),
+                'label' => 'Email',
+                'attr' => array('class' => 'form-control')))
+            ->add('phone', TextType::class, array(
+                'constraints' => array(
+                    new NotBlank(),
+                    new Type(array(
+                        'type' => 'numeric',
+                        'message' => 'Nr telefonu może zawierać tylko cyfry.'
+                    ))
+                ),
+                'label' => 'Nr telefonu',
+                'attr' => array('class' => 'form-control')))
             ->add('sign_up', SubmitType::class, array('label' => 'Zarejestruj sie', 'attr' => array('class' => 'form-control btn btn-primary')))
             ->getForm();
 
@@ -72,7 +112,7 @@ class DefaultController extends Controller
             $doctrine->persist($student);
             $doctrine->flush();
 
-            $this->addFlash('notice', 'Student has been registered.');
+            $this->addFlash('notice', 'Rejestracja przebiegła pomyślnie.');
 
             return $this->redirectToRoute('homepage');
         }
