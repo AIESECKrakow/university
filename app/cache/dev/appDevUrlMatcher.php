@@ -119,6 +119,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::signUpAction',  '_route' => 'sign-up',);
         }
 
+        // partners
+        if ($pathinfo === '/partners') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::partnersAction',  '_route' => 'partners',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

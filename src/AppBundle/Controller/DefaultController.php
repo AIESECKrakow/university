@@ -121,4 +121,11 @@ class DefaultController extends Controller
             'form' => $form->createView()
         ));
     }
+
+    /**
+     * @Route("/partners", name="partners")
+     */
+    public function partnersAction() {
+        return $this->render('default/partners.html.twig');
+    }
 }
