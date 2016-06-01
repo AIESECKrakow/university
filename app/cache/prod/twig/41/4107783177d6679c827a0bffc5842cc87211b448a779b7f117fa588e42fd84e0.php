@@ -42,14 +42,14 @@ class __TwigTemplate_130c7dbd3550e368ca0ecddf49a8f16cc9d6d1072a1057f490905318ef4
 ";
         // line 14
         $this->displayBlock('navbar', $context, $blocks);
-        // line 34
-        $this->displayBlock('body', $context, $blocks);
         // line 35
+        $this->displayBlock('body', $context, $blocks);
+        // line 36
         $this->displayBlock('footer', $context, $blocks);
-        // line 86
+        // line 96
         echo "            ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 89
+        // line 99
         echo "</body>
 </html>";
     }
@@ -78,7 +78,7 @@ class __TwigTemplate_130c7dbd3550e368ca0ecddf49a8f16cc9d6d1072a1057f490905318ef4
         // line 15
         echo "    <nav class=\"navbar navbar-default navbar-fixed-top\">
         <div class=\"navbar-header\">
-            <a class=\"navbar-brand\" href=\"#\">
+            <a class=\"navbar-brand\" href=\"/about\">
                 <img alt=\"Brand\" src=\"";
         // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/logo-black-small.png"), "html", null, true);
@@ -87,14 +87,15 @@ class __TwigTemplate_130c7dbd3550e368ca0ecddf49a8f16cc9d6d1072a1057f490905318ef4
         </div>
         <div class=\"container\">
             <ul class=\"nav navbar-nav navbar-right\">
+                <li><a class=\"nav-link\" href=\"/sign-up\">ZAPISZ SIĘ</a></li>
                 <li><a class=\"nav-link\" href=\"#\">HARMONOGRAM</a></li>
                 <li><a class=\"nav-link\" href=\"#\">AKTUALNOŚCI</a></li>
                 <li><a class=\"nav-link\" href=\"#\">CENNIK</a></li>
                 <li><a class=\"nav-link\" href=\"#\">O WARSZTATACH</a></li>
-                <li><a class=\"nav-link\" href=\"#\">PARTNERZY</a></li>
+                <li><a class=\"nav-link\" href=\"/partners\">PARTNERZY</a></li>
                 <li><a class=\"nav-link\" href=\"#\">KONTAKT</a></li>
                 <li><a href=\"https://www.facebook.com/lckrakow\" target=\"_blank\"><img src=\"";
-        // line 29
+        // line 30
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/FB-f-Logo__blue_100.png"), "html", null, true);
         echo "\" style=\"height: 20px;\" /></a></li>
             </ul>
@@ -103,107 +104,119 @@ class __TwigTemplate_130c7dbd3550e368ca0ecddf49a8f16cc9d6d1072a1057f490905318ef4
 ";
     }
 
-    // line 34
+    // line 35
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 35
+    // line 36
     public function block_footer($context, array $blocks = array())
     {
-        // line 36
+        // line 37
         echo "<div class=\"wrapper\">
     <div class=\"push\"></div>
 </div>
 <div class=\"footer\">
     <h4>Nasi partnerzy</h4>
-    <!-- first row of partners -->
     <div class=\"row\">
-        <div class=\"col-md-12\">
-            <div class=\"col-md-2 col-xs-6\">
-                <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 45
+        <div class=\"col-md-3\">
+            <a href=\"http://www.soul.edu.pl/\" target=\"_blank\"><img style=\"max-height: 50px;\" src=\"";
+        // line 44
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/soul-logo.jpg"), "html", null, true);
+        echo "\" /><span style=\"color: darkblue;\">Szkoła językowa SOUL</span></a>
+        </div>
+        <!-- middle partners column -->
+        <div class=\"col-md-6 text-center\">
+            <!-- first row of partners -->
+            <div class=\"row\">
+                    <div class=\"col-md-12\">
+                        <div class=\"col-md-2 col-xs-6\">
+                            <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 52
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/cinnabon.png"), "html", null, true);
         echo "\" /></a>
-            </div>
-            <div class=\"col-md-2 col-xs-6\">
-                <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 48
+                        </div>
+                        <div class=\"col-md-2 col-xs-6\">
+                            <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 55
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/atlanticsports.png"), "html", null, true);
         echo "\" /></a>
-            </div>
-            <div class=\"col-md-2 col-xs-6\">
-                <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 51
+                        </div>
+                        <div class=\"col-md-2 col-xs-6\">
+                            <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/interbook.jpg"), "html", null, true);
         echo "\" /></a>
-            </div>
-            <div class=\"col-md-2 col-xs-6\">
-                <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 54
+                        </div>
+                        <div class=\"col-md-2 col-xs-6\">
+                            <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 61
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/cukier.png"), "html", null, true);
         echo "\" /></a>
-            </div>
-            <div class=\"col-md-2 col-xs-6\">
-                <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 57
+                        </div>
+                        <div class=\"col-md-2 col-xs-6\">
+                            <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 64
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/dagrasso.png"), "html", null, true);
         echo "\" /></a>
-            </div>
-            <div class=\"col-md-2 col-xs-6\">
-                <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 60
+                        </div>
+                        <div class=\"col-md-2 col-xs-6\">
+                            <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 67
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/b4.jpg"), "html", null, true);
         echo "\" /></a>
-            </div>
-        </div>
-        <!-- second row of partners -->
-        <div class=\"row\">
-            <div class=\"col-md-12\">
-                <div class=\"col-md-2 col-xs-6\">
-                    <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 67
+                        </div>
+                    </div>
+                    <!-- second row of partners -->
+                    <div class=\"row\">
+                        <div class=\"col-md-12\">
+                            <div class=\"col-md-2 col-xs-6\">
+                                <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 74
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/cwflogo.jpg"), "html", null, true);
         echo "\" /></a>
-                </div>
-                <div class=\"col-md-2 col-xs-6\">
-                    <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 70
+                            </div>
+                            <div class=\"col-md-2 col-xs-6\">
+                                <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 77
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/diva.png"), "html", null, true);
         echo "\" /></a>
-                </div>
-                <div class=\"col-md-2 col-xs-6\">
-                    <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 73
+                            </div>
+                            <div class=\"col-md-2 col-xs-6\">
+                                <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 80
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/parkwodny.jpg"), "html", null, true);
         echo "\" /></a>
-                </div>
-                <div class=\"col-md-2 col-xs-6\">
-                    <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 76
+                            </div>
+                            <div class=\"col-md-2 col-xs-6\">
+                                <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 83
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/pik.png"), "html", null, true);
         echo "\" /></a>
-                </div>
-                <div class=\"col-md-2 col-xs-6\">
-                    <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 79
+                            </div>
+                            <div class=\"col-md-2 col-xs-6\">
+                                <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 86
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/shakebake.png"), "html", null, true);
         echo "\" /></a>
-                </div>
-                <div class=\"col-md-2 col-xs-6\">
-                    <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 82
+                            </div>
+                            <div class=\"col-md-2 col-xs-6\">
+                                <a href=\"#\"><img class=\"footer-partners\" src=\"";
+        // line 89
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/wedel.jpg"), "html", null, true);
         echo "\" /></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+        </div>
             ";
     }
 
-    // line 86
+    // line 96
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 87
+        // line 97
         echo "                <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\" integrity=\"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\" crossorigin=\"anonymous\"></script>
             ";
     }
@@ -220,7 +233,7 @@ class __TwigTemplate_130c7dbd3550e368ca0ecddf49a8f16cc9d6d1072a1057f490905318ef4
 
     public function getDebugInfo()
     {
-        return array (  207 => 87,  204 => 86,  196 => 82,  190 => 79,  184 => 76,  178 => 73,  172 => 70,  166 => 67,  156 => 60,  150 => 57,  144 => 54,  138 => 51,  132 => 48,  126 => 45,  115 => 36,  112 => 35,  107 => 34,  98 => 29,  84 => 18,  79 => 15,  76 => 14,  67 => 7,  64 => 6,  58 => 5,  53 => 89,  50 => 86,  48 => 35,  46 => 34,  44 => 14,  37 => 11,  35 => 6,  31 => 5,  25 => 1,);
+        return array (  220 => 97,  217 => 96,  206 => 89,  200 => 86,  194 => 83,  188 => 80,  182 => 77,  176 => 74,  166 => 67,  160 => 64,  154 => 61,  148 => 58,  142 => 55,  136 => 52,  125 => 44,  116 => 37,  113 => 36,  108 => 35,  99 => 30,  84 => 18,  79 => 15,  76 => 14,  67 => 7,  64 => 6,  58 => 5,  53 => 99,  50 => 96,  48 => 36,  46 => 35,  44 => 14,  37 => 11,  35 => 6,  31 => 5,  25 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -239,17 +252,18 @@ class __TwigTemplate_130c7dbd3550e368ca0ecddf49a8f16cc9d6d1072a1057f490905318ef4
 /* {% block navbar %}*/
 /*     <nav class="navbar navbar-default navbar-fixed-top">*/
 /*         <div class="navbar-header">*/
-/*             <a class="navbar-brand" href="#">*/
+/*             <a class="navbar-brand" href="/about">*/
 /*                 <img alt="Brand" src="{{ asset('img/logo-black-small.png') }}" style="height:30px">*/
 /*             </a>*/
 /*         </div>*/
 /*         <div class="container">*/
 /*             <ul class="nav navbar-nav navbar-right">*/
+/*                 <li><a class="nav-link" href="/sign-up">ZAPISZ SIĘ</a></li>*/
 /*                 <li><a class="nav-link" href="#">HARMONOGRAM</a></li>*/
 /*                 <li><a class="nav-link" href="#">AKTUALNOŚCI</a></li>*/
 /*                 <li><a class="nav-link" href="#">CENNIK</a></li>*/
 /*                 <li><a class="nav-link" href="#">O WARSZTATACH</a></li>*/
-/*                 <li><a class="nav-link" href="#">PARTNERZY</a></li>*/
+/*                 <li><a class="nav-link" href="/partners">PARTNERZY</a></li>*/
 /*                 <li><a class="nav-link" href="#">KONTAKT</a></li>*/
 /*                 <li><a href="https://www.facebook.com/lckrakow" target="_blank"><img src="{{ asset('img/FB-f-Logo__blue_100.png') }}" style="height: 20px;" /></a></li>*/
 /*             </ul>*/
@@ -263,50 +277,59 @@ class __TwigTemplate_130c7dbd3550e368ca0ecddf49a8f16cc9d6d1072a1057f490905318ef4
 /* </div>*/
 /* <div class="footer">*/
 /*     <h4>Nasi partnerzy</h4>*/
-/*     <!-- first row of partners -->*/
 /*     <div class="row">*/
-/*         <div class="col-md-12">*/
-/*             <div class="col-md-2 col-xs-6">*/
-/*                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/cinnabon.png') }}" /></a>*/
-/*             </div>*/
-/*             <div class="col-md-2 col-xs-6">*/
-/*                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/atlanticsports.png') }}" /></a>*/
-/*             </div>*/
-/*             <div class="col-md-2 col-xs-6">*/
-/*                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/interbook.jpg') }}" /></a>*/
-/*             </div>*/
-/*             <div class="col-md-2 col-xs-6">*/
-/*                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/cukier.png') }}" /></a>*/
-/*             </div>*/
-/*             <div class="col-md-2 col-xs-6">*/
-/*                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/dagrasso.png') }}" /></a>*/
-/*             </div>*/
-/*             <div class="col-md-2 col-xs-6">*/
-/*                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/b4.jpg') }}" /></a>*/
-/*             </div>*/
+/*         <div class="col-md-3">*/
+/*             <a href="http://www.soul.edu.pl/" target="_blank"><img style="max-height: 50px;" src="{{ asset('img/partners/soul-logo.jpg') }}" /><span style="color: darkblue;">Szkoła językowa SOUL</span></a>*/
 /*         </div>*/
-/*         <!-- second row of partners -->*/
-/*         <div class="row">*/
-/*             <div class="col-md-12">*/
-/*                 <div class="col-md-2 col-xs-6">*/
-/*                     <a href="#"><img class="footer-partners" src="{{ asset('img/partners/cwflogo.jpg') }}" /></a>*/
+/*         <!-- middle partners column -->*/
+/*         <div class="col-md-6 text-center">*/
+/*             <!-- first row of partners -->*/
+/*             <div class="row">*/
+/*                     <div class="col-md-12">*/
+/*                         <div class="col-md-2 col-xs-6">*/
+/*                             <a href="#"><img class="footer-partners" src="{{ asset('img/partners/cinnabon.png') }}" /></a>*/
+/*                         </div>*/
+/*                         <div class="col-md-2 col-xs-6">*/
+/*                             <a href="#"><img class="footer-partners" src="{{ asset('img/partners/atlanticsports.png') }}" /></a>*/
+/*                         </div>*/
+/*                         <div class="col-md-2 col-xs-6">*/
+/*                             <a href="#"><img class="footer-partners" src="{{ asset('img/partners/interbook.jpg') }}" /></a>*/
+/*                         </div>*/
+/*                         <div class="col-md-2 col-xs-6">*/
+/*                             <a href="#"><img class="footer-partners" src="{{ asset('img/partners/cukier.png') }}" /></a>*/
+/*                         </div>*/
+/*                         <div class="col-md-2 col-xs-6">*/
+/*                             <a href="#"><img class="footer-partners" src="{{ asset('img/partners/dagrasso.png') }}" /></a>*/
+/*                         </div>*/
+/*                         <div class="col-md-2 col-xs-6">*/
+/*                             <a href="#"><img class="footer-partners" src="{{ asset('img/partners/b4.jpg') }}" /></a>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                     <!-- second row of partners -->*/
+/*                     <div class="row">*/
+/*                         <div class="col-md-12">*/
+/*                             <div class="col-md-2 col-xs-6">*/
+/*                                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/cwflogo.jpg') }}" /></a>*/
+/*                             </div>*/
+/*                             <div class="col-md-2 col-xs-6">*/
+/*                                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/diva.png') }}" /></a>*/
+/*                             </div>*/
+/*                             <div class="col-md-2 col-xs-6">*/
+/*                                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/parkwodny.jpg') }}" /></a>*/
+/*                             </div>*/
+/*                             <div class="col-md-2 col-xs-6">*/
+/*                                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/pik.png') }}" /></a>*/
+/*                             </div>*/
+/*                             <div class="col-md-2 col-xs-6">*/
+/*                                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/shakebake.png') }}" /></a>*/
+/*                             </div>*/
+/*                             <div class="col-md-2 col-xs-6">*/
+/*                                 <a href="#"><img class="footer-partners" src="{{ asset('img/partners/wedel.jpg') }}" /></a>*/
+/*                             </div>*/
+/*                         </div>*/
+/*                     </div>*/
 /*                 </div>*/
-/*                 <div class="col-md-2 col-xs-6">*/
-/*                     <a href="#"><img class="footer-partners" src="{{ asset('img/partners/diva.png') }}" /></a>*/
-/*                 </div>*/
-/*                 <div class="col-md-2 col-xs-6">*/
-/*                     <a href="#"><img class="footer-partners" src="{{ asset('img/partners/parkwodny.jpg') }}" /></a>*/
-/*                 </div>*/
-/*                 <div class="col-md-2 col-xs-6">*/
-/*                     <a href="#"><img class="footer-partners" src="{{ asset('img/partners/pik.png') }}" /></a>*/
-/*                 </div>*/
-/*                 <div class="col-md-2 col-xs-6">*/
-/*                     <a href="#"><img class="footer-partners" src="{{ asset('img/partners/shakebake.png') }}" /></a>*/
-/*                 </div>*/
-/*                 <div class="col-md-2 col-xs-6">*/
-/*                     <a href="#"><img class="footer-partners" src="{{ asset('img/partners/wedel.jpg') }}" /></a>*/
-/*                 </div>*/
-/*             </div>*/
+/*         </div>*/
 /*             {%  endblock %}*/
 /*             {% block javascripts %}*/
 /*                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>*/

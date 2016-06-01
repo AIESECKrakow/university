@@ -114,15 +114,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
-<<<<<<< HEAD
+        // sign-up
+        if ($pathinfo === '/sign-up') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::signUpAction',  '_route' => 'sign-up',);
+        }
+
+        if (0 === strpos($pathinfo, '/p')) {
+            // partners
+            if ($pathinfo === '/partners') {
+                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::partnersAction',  '_route' => 'partners',);
+            }
+
+            // price
+            if ($pathinfo === '/price') {
+                return array (  '_controller' => 'AppBundle\\Controller\\PriceController::priceAction',  '_route' => 'price',);
+            }
+
+        }
+
         // about
         if ($pathinfo === '/about') {
             return array (  '_controller' => 'AppBundle\\Controller\\UniController::aboutAction',  '_route' => 'about',);
-=======
-        // price
-        if ($pathinfo === '/price') {
-            return array (  '_controller' => 'AppBundle\\Controller\\PriceController::priceAction',  '_route' => 'price',);
->>>>>>> Radek
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

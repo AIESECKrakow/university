@@ -28,7 +28,23 @@ class __TwigTemplate_e07de63f8f6f84afdaf6cf3aa2f95b47b7bede78dc95a8cfd119c07b789
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "
+        echo "    <div class=\"col-md-12\">
+    ";
+        // line 5
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "flashbag", array()), "get", array(0 => "notice"), "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["flash_message"]) {
+            // line 6
+            echo "        <div class=\"alert alert-success\" role=\"alert\">";
+            echo twig_escape_filter($this->env, $context["flash_message"], "html", null, true);
+            echo "</div>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 8
+        echo "    </div>
 ";
     }
 
@@ -44,11 +60,15 @@ class __TwigTemplate_e07de63f8f6f84afdaf6cf3aa2f95b47b7bede78dc95a8cfd119c07b789
 
     public function getDebugInfo()
     {
-        return array (  31 => 4,  28 => 3,  11 => 1,);
+        return array (  47 => 8,  38 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
 /* */
 /* {% block body %}*/
-/* */
+/*     <div class="col-md-12">*/
+/*     {% for flash_message in app.session.flashbag.get('notice') %}*/
+/*         <div class="alert alert-success" role="alert">{{ flash_message }}</div>*/
+/*     {% endfor %}*/
+/*     </div>*/
 /* {% endblock %}*/

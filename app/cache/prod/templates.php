@@ -80,5 +80,8 @@
   'DoctrineBundle:Collector:explain.html.twig' => 'C:\\xampp\\htdocs\\aiesec\\university\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig',
   '::base.html.twig' => 'C:\\xampp\\htdocs\\aiesec\\university\\app/Resources\\views/base.html.twig',
   ':default:index.html.twig' => 'C:\\xampp\\htdocs\\aiesec\\university\\app/Resources\\views/default/index.html.twig',
+  ':default:partners.html.twig' => 'C:\\xampp\\htdocs\\aiesec\\university\\app/Resources\\views/default/partners.html.twig',
   ':default:signUp.html.twig' => 'C:\\xampp\\htdocs\\aiesec\\university\\app/Resources\\views/default/signUp.html.twig',
+  ':default:uni_about.html.twig' => 'C:\\xampp\\htdocs\\aiesec\\university\\app/Resources\\views/default/uni_about.html.twig',
+  ':default:uni_price.html.twig' => 'C:\\xampp\\htdocs\\aiesec\\university\\app/Resources\\views/default/uni_price.html.twig',
 );
