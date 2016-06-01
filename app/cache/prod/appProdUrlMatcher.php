@@ -36,6 +36,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
+        // sign-up
+        if ($pathinfo === '/sign-up') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::signUpAction',  '_route' => 'sign-up',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

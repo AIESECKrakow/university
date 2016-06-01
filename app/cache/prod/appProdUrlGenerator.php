@@ -24,6 +24,7 @@ class appProdUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerat
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
         'homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'sign-up' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::signUpAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/sign-up',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
         }
     }
