@@ -14,17 +14,24 @@
 {% block navbar %}
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/about">
+            <a class="navbar-brand" href="/">
                 <img alt="Brand" src="{{ asset('img/logo-black-small.png') }}" style="height:30px">
             </a>
         </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <p class="navbar-text">
+                    <a class="navbar-title nav-link" href="/">Warsztaty językowe</a>
+                </p>
+            </li>
+        </ul>
         <div class="container">
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="nav-link" href="/sign-up">ZAPISZ SIĘ</a></li>
                 <li><a class="nav-link" href="#">HARMONOGRAM</a></li>
                 <li><a class="nav-link" href="#">AKTUALNOŚCI</a></li>
                 <li><a class="nav-link" href="#">CENNIK</a></li>
-                <li><a class="nav-link" href="#">O WARSZTATACH</a></li>
+                <li><a class="nav-link" href="/about">O WARSZTATACH</a></li>
                 <li><a class="nav-link" href="/partners">PARTNERZY</a></li>
                 <li><a class="nav-link" href="#">KONTAKT</a></li>
                 <li><a href="https://www.facebook.com/lckrakow" target="_blank"><img src="{{ asset('img/FB-f-Logo__blue_100.png') }}" style="height: 20px;" /></a></li>

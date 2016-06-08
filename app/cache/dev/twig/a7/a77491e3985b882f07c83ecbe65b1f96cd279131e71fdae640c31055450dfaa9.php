@@ -21,8 +21,8 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6a21c67d0f3ea0e99f4ae21d5d0ae86a6be86f85c88528233459400deefc4d20 = $this->env->getExtension("native_profiler");
-        $__internal_6a21c67d0f3ea0e99f4ae21d5d0ae86a6be86f85c88528233459400deefc4d20->enter($__internal_6a21c67d0f3ea0e99f4ae21d5d0ae86a6be86f85c88528233459400deefc4d20_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_ffc12aabada699f781c23f9891745bac6cc0b43f1a47bf9b3a5431ecb343acb8 = $this->env->getExtension("native_profiler");
+        $__internal_ffc12aabada699f781c23f9891745bac6cc0b43f1a47bf9b3a5431ecb343acb8->enter($__internal_ffc12aabada699f781c23f9891745bac6cc0b43f1a47bf9b3a5431ecb343acb8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -45,38 +45,38 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
 ";
         // line 14
         $this->displayBlock('navbar', $context, $blocks);
-        // line 35
+        // line 42
         $this->displayBlock('body', $context, $blocks);
-        // line 36
+        // line 43
         $this->displayBlock('footer', $context, $blocks);
-        // line 96
+        // line 103
         echo "            ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 99
+        // line 106
         echo "</body>
 </html>";
         
-        $__internal_6a21c67d0f3ea0e99f4ae21d5d0ae86a6be86f85c88528233459400deefc4d20->leave($__internal_6a21c67d0f3ea0e99f4ae21d5d0ae86a6be86f85c88528233459400deefc4d20_prof);
+        $__internal_ffc12aabada699f781c23f9891745bac6cc0b43f1a47bf9b3a5431ecb343acb8->leave($__internal_ffc12aabada699f781c23f9891745bac6cc0b43f1a47bf9b3a5431ecb343acb8_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_198d20b909e5df2fa6af4ef76ec25a6ed9f709d7bcc89636971a1d1ab764831d = $this->env->getExtension("native_profiler");
-        $__internal_198d20b909e5df2fa6af4ef76ec25a6ed9f709d7bcc89636971a1d1ab764831d->enter($__internal_198d20b909e5df2fa6af4ef76ec25a6ed9f709d7bcc89636971a1d1ab764831d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_41b506210e43c229e0a3286222e82fe976f5f74e3cb56791ee297bbea140707b = $this->env->getExtension("native_profiler");
+        $__internal_41b506210e43c229e0a3286222e82fe976f5f74e3cb56791ee297bbea140707b->enter($__internal_41b506210e43c229e0a3286222e82fe976f5f74e3cb56791ee297bbea140707b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Warsztaty językowe AIESEC University";
         
-        $__internal_198d20b909e5df2fa6af4ef76ec25a6ed9f709d7bcc89636971a1d1ab764831d->leave($__internal_198d20b909e5df2fa6af4ef76ec25a6ed9f709d7bcc89636971a1d1ab764831d_prof);
+        $__internal_41b506210e43c229e0a3286222e82fe976f5f74e3cb56791ee297bbea140707b->leave($__internal_41b506210e43c229e0a3286222e82fe976f5f74e3cb56791ee297bbea140707b_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_3291b8073074c8ea5ae481c44cce7a464c36749a1a8b2edf35d97a977300d666 = $this->env->getExtension("native_profiler");
-        $__internal_3291b8073074c8ea5ae481c44cce7a464c36749a1a8b2edf35d97a977300d666->enter($__internal_3291b8073074c8ea5ae481c44cce7a464c36749a1a8b2edf35d97a977300d666_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_02136023319f5924a519df2b72f2b9e971ec796fbb853fa7f69542fda7751817 = $this->env->getExtension("native_profiler");
+        $__internal_02136023319f5924a519df2b72f2b9e971ec796fbb853fa7f69542fda7751817->enter($__internal_02136023319f5924a519df2b72f2b9e971ec796fbb853fa7f69542fda7751817_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 7
         echo "        <link rel=\"stylesheet\" href=\"";
@@ -86,37 +86,44 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
         <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css\" integrity=\"sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r\" crossorigin=\"anonymous\">
     ";
         
-        $__internal_3291b8073074c8ea5ae481c44cce7a464c36749a1a8b2edf35d97a977300d666->leave($__internal_3291b8073074c8ea5ae481c44cce7a464c36749a1a8b2edf35d97a977300d666_prof);
+        $__internal_02136023319f5924a519df2b72f2b9e971ec796fbb853fa7f69542fda7751817->leave($__internal_02136023319f5924a519df2b72f2b9e971ec796fbb853fa7f69542fda7751817_prof);
 
     }
 
     // line 14
     public function block_navbar($context, array $blocks = array())
     {
-        $__internal_c9e97553055a44ab65073f891b9d6b7534c09fc095d43698e881220ca38bd592 = $this->env->getExtension("native_profiler");
-        $__internal_c9e97553055a44ab65073f891b9d6b7534c09fc095d43698e881220ca38bd592->enter($__internal_c9e97553055a44ab65073f891b9d6b7534c09fc095d43698e881220ca38bd592_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navbar"));
+        $__internal_6e3b8a146437f66775a30282e88e10d9f23db91cce19d7c6c2db367d7574c525 = $this->env->getExtension("native_profiler");
+        $__internal_6e3b8a146437f66775a30282e88e10d9f23db91cce19d7c6c2db367d7574c525->enter($__internal_6e3b8a146437f66775a30282e88e10d9f23db91cce19d7c6c2db367d7574c525_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navbar"));
 
         // line 15
         echo "    <nav class=\"navbar navbar-default navbar-fixed-top\">
         <div class=\"navbar-header\">
-            <a class=\"navbar-brand\" href=\"/about\">
+            <a class=\"navbar-brand\" href=\"/\">
                 <img alt=\"Brand\" src=\"";
         // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/logo-black-small.png"), "html", null, true);
         echo "\" style=\"height:30px\">
             </a>
         </div>
+        <ul class=\"nav navbar-nav\">
+            <li>
+                <p class=\"navbar-text\">
+                    <a class=\"navbar-title nav-link\" href=\"/\">Warsztaty językowe</a>
+                </p>
+            </li>
+        </ul>
         <div class=\"container\">
             <ul class=\"nav navbar-nav navbar-right\">
                 <li><a class=\"nav-link\" href=\"/sign-up\">ZAPISZ SIĘ</a></li>
                 <li><a class=\"nav-link\" href=\"#\">HARMONOGRAM</a></li>
                 <li><a class=\"nav-link\" href=\"#\">AKTUALNOŚCI</a></li>
                 <li><a class=\"nav-link\" href=\"#\">CENNIK</a></li>
-                <li><a class=\"nav-link\" href=\"#\">O WARSZTATACH</a></li>
+                <li><a class=\"nav-link\" href=\"/about\">O WARSZTATACH</a></li>
                 <li><a class=\"nav-link\" href=\"/partners\">PARTNERZY</a></li>
                 <li><a class=\"nav-link\" href=\"#\">KONTAKT</a></li>
                 <li><a href=\"https://www.facebook.com/lckrakow\" target=\"_blank\"><img src=\"";
-        // line 30
+        // line 37
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/FB-f-Logo__blue_100.png"), "html", null, true);
         echo "\" style=\"height: 20px;\" /></a></li>
             </ul>
@@ -124,28 +131,28 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
     </nav>
 ";
         
-        $__internal_c9e97553055a44ab65073f891b9d6b7534c09fc095d43698e881220ca38bd592->leave($__internal_c9e97553055a44ab65073f891b9d6b7534c09fc095d43698e881220ca38bd592_prof);
+        $__internal_6e3b8a146437f66775a30282e88e10d9f23db91cce19d7c6c2db367d7574c525->leave($__internal_6e3b8a146437f66775a30282e88e10d9f23db91cce19d7c6c2db367d7574c525_prof);
 
     }
 
-    // line 35
+    // line 42
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6197560d8ee32cd35d8e78cec72236a548a879ca646110f94b2d2c5d7a523090 = $this->env->getExtension("native_profiler");
-        $__internal_6197560d8ee32cd35d8e78cec72236a548a879ca646110f94b2d2c5d7a523090->enter($__internal_6197560d8ee32cd35d8e78cec72236a548a879ca646110f94b2d2c5d7a523090_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_cd206dc982443d2c454a460212a52e7d1107df7fb4261512f936d4756df9c267 = $this->env->getExtension("native_profiler");
+        $__internal_cd206dc982443d2c454a460212a52e7d1107df7fb4261512f936d4756df9c267->enter($__internal_cd206dc982443d2c454a460212a52e7d1107df7fb4261512f936d4756df9c267_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_6197560d8ee32cd35d8e78cec72236a548a879ca646110f94b2d2c5d7a523090->leave($__internal_6197560d8ee32cd35d8e78cec72236a548a879ca646110f94b2d2c5d7a523090_prof);
+        $__internal_cd206dc982443d2c454a460212a52e7d1107df7fb4261512f936d4756df9c267->leave($__internal_cd206dc982443d2c454a460212a52e7d1107df7fb4261512f936d4756df9c267_prof);
 
     }
 
-    // line 36
+    // line 43
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_3b7edd171b72582b9ff6d4d7fb1256921a2996d42eec570dc0500b434afd6b3a = $this->env->getExtension("native_profiler");
-        $__internal_3b7edd171b72582b9ff6d4d7fb1256921a2996d42eec570dc0500b434afd6b3a->enter($__internal_3b7edd171b72582b9ff6d4d7fb1256921a2996d42eec570dc0500b434afd6b3a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_0f267c953f2a51415bfd31a0103487ff4c9e373cd52b36ba057fb53745e2b60d = $this->env->getExtension("native_profiler");
+        $__internal_0f267c953f2a51415bfd31a0103487ff4c9e373cd52b36ba057fb53745e2b60d->enter($__internal_0f267c953f2a51415bfd31a0103487ff4c9e373cd52b36ba057fb53745e2b60d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 37
+        // line 44
         echo "<div class=\"wrapper\">
     <div class=\"push\"></div>
 </div>
@@ -154,7 +161,7 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
     <div class=\"row\">
         <div class=\"col-md-3\">
             <a href=\"http://www.soul.edu.pl/\" target=\"_blank\"><img style=\"max-height: 50px;\" src=\"";
-        // line 44
+        // line 51
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/soul-logo.jpg"), "html", null, true);
         echo "\" /><span style=\"color: darkblue;\">Szkoła językowa SOUL</span></a>
         </div>
@@ -165,37 +172,37 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
                     <div class=\"col-md-12\">
                         <div class=\"col-md-2 col-xs-6\">
                             <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 52
+        // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/cinnabon.png"), "html", null, true);
         echo "\" /></a>
                         </div>
                         <div class=\"col-md-2 col-xs-6\">
                             <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 55
+        // line 62
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/atlanticsports.png"), "html", null, true);
         echo "\" /></a>
                         </div>
                         <div class=\"col-md-2 col-xs-6\">
                             <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 58
+        // line 65
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/interbook.jpg"), "html", null, true);
         echo "\" /></a>
                         </div>
                         <div class=\"col-md-2 col-xs-6\">
                             <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 61
+        // line 68
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/cukier.png"), "html", null, true);
         echo "\" /></a>
                         </div>
                         <div class=\"col-md-2 col-xs-6\">
                             <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 64
+        // line 71
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/dagrasso.png"), "html", null, true);
         echo "\" /></a>
                         </div>
                         <div class=\"col-md-2 col-xs-6\">
                             <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 67
+        // line 74
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/b4.jpg"), "html", null, true);
         echo "\" /></a>
                         </div>
@@ -205,37 +212,37 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
                         <div class=\"col-md-12\">
                             <div class=\"col-md-2 col-xs-6\">
                                 <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 74
+        // line 81
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/cwflogo.jpg"), "html", null, true);
         echo "\" /></a>
                             </div>
                             <div class=\"col-md-2 col-xs-6\">
                                 <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 77
+        // line 84
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/diva.png"), "html", null, true);
         echo "\" /></a>
                             </div>
                             <div class=\"col-md-2 col-xs-6\">
                                 <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 80
+        // line 87
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/parkwodny.jpg"), "html", null, true);
         echo "\" /></a>
                             </div>
                             <div class=\"col-md-2 col-xs-6\">
                                 <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 83
+        // line 90
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/pik.png"), "html", null, true);
         echo "\" /></a>
                             </div>
                             <div class=\"col-md-2 col-xs-6\">
                                 <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 86
+        // line 93
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/shakebake.png"), "html", null, true);
         echo "\" /></a>
                             </div>
                             <div class=\"col-md-2 col-xs-6\">
                                 <a href=\"#\"><img class=\"footer-partners\" src=\"";
-        // line 89
+        // line 96
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("img/partners/wedel.jpg"), "html", null, true);
         echo "\" /></a>
                             </div>
@@ -245,21 +252,21 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
         </div>
             ";
         
-        $__internal_3b7edd171b72582b9ff6d4d7fb1256921a2996d42eec570dc0500b434afd6b3a->leave($__internal_3b7edd171b72582b9ff6d4d7fb1256921a2996d42eec570dc0500b434afd6b3a_prof);
+        $__internal_0f267c953f2a51415bfd31a0103487ff4c9e373cd52b36ba057fb53745e2b60d->leave($__internal_0f267c953f2a51415bfd31a0103487ff4c9e373cd52b36ba057fb53745e2b60d_prof);
 
     }
 
-    // line 96
+    // line 103
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_718e265cf5b6325b396d3132d3aaf6ceb99fb51134e48a84b29dcb51186163aa = $this->env->getExtension("native_profiler");
-        $__internal_718e265cf5b6325b396d3132d3aaf6ceb99fb51134e48a84b29dcb51186163aa->enter($__internal_718e265cf5b6325b396d3132d3aaf6ceb99fb51134e48a84b29dcb51186163aa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_889990e60dd085533168de6d1bb80f4b9e60211a8d2c7845fbbd34d1a4d79644 = $this->env->getExtension("native_profiler");
+        $__internal_889990e60dd085533168de6d1bb80f4b9e60211a8d2c7845fbbd34d1a4d79644->enter($__internal_889990e60dd085533168de6d1bb80f4b9e60211a8d2c7845fbbd34d1a4d79644_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 97
+        // line 104
         echo "                <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\" integrity=\"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\" crossorigin=\"anonymous\"></script>
             ";
         
-        $__internal_718e265cf5b6325b396d3132d3aaf6ceb99fb51134e48a84b29dcb51186163aa->leave($__internal_718e265cf5b6325b396d3132d3aaf6ceb99fb51134e48a84b29dcb51186163aa_prof);
+        $__internal_889990e60dd085533168de6d1bb80f4b9e60211a8d2c7845fbbd34d1a4d79644->leave($__internal_889990e60dd085533168de6d1bb80f4b9e60211a8d2c7845fbbd34d1a4d79644_prof);
 
     }
 
@@ -275,7 +282,7 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
 
     public function getDebugInfo()
     {
-        return array (  259 => 97,  253 => 96,  239 => 89,  233 => 86,  227 => 83,  221 => 80,  215 => 77,  209 => 74,  199 => 67,  193 => 64,  187 => 61,  181 => 58,  175 => 55,  169 => 52,  158 => 44,  149 => 37,  143 => 36,  132 => 35,  120 => 30,  105 => 18,  100 => 15,  94 => 14,  82 => 7,  76 => 6,  64 => 5,  56 => 99,  53 => 96,  51 => 36,  49 => 35,  47 => 14,  40 => 11,  38 => 6,  34 => 5,  28 => 1,);
+        return array (  266 => 104,  260 => 103,  246 => 96,  240 => 93,  234 => 90,  228 => 87,  222 => 84,  216 => 81,  206 => 74,  200 => 71,  194 => 68,  188 => 65,  182 => 62,  176 => 59,  165 => 51,  156 => 44,  150 => 43,  139 => 42,  127 => 37,  105 => 18,  100 => 15,  94 => 14,  82 => 7,  76 => 6,  64 => 5,  56 => 106,  53 => 103,  51 => 43,  49 => 42,  47 => 14,  40 => 11,  38 => 6,  34 => 5,  28 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -294,17 +301,24 @@ class __TwigTemplate_fb5de487a2200e9f916b578a9320e03ef2959581981f7ca9df5c3f3f9da
 /* {% block navbar %}*/
 /*     <nav class="navbar navbar-default navbar-fixed-top">*/
 /*         <div class="navbar-header">*/
-/*             <a class="navbar-brand" href="/about">*/
+/*             <a class="navbar-brand" href="/">*/
 /*                 <img alt="Brand" src="{{ asset('img/logo-black-small.png') }}" style="height:30px">*/
 /*             </a>*/
 /*         </div>*/
+/*         <ul class="nav navbar-nav">*/
+/*             <li>*/
+/*                 <p class="navbar-text">*/
+/*                     <a class="navbar-title nav-link" href="/">Warsztaty językowe</a>*/
+/*                 </p>*/
+/*             </li>*/
+/*         </ul>*/
 /*         <div class="container">*/
 /*             <ul class="nav navbar-nav navbar-right">*/
 /*                 <li><a class="nav-link" href="/sign-up">ZAPISZ SIĘ</a></li>*/
 /*                 <li><a class="nav-link" href="#">HARMONOGRAM</a></li>*/
 /*                 <li><a class="nav-link" href="#">AKTUALNOŚCI</a></li>*/
 /*                 <li><a class="nav-link" href="#">CENNIK</a></li>*/
-/*                 <li><a class="nav-link" href="#">O WARSZTATACH</a></li>*/
+/*                 <li><a class="nav-link" href="/about">O WARSZTATACH</a></li>*/
 /*                 <li><a class="nav-link" href="/partners">PARTNERZY</a></li>*/
 /*                 <li><a class="nav-link" href="#">KONTAKT</a></li>*/
 /*                 <li><a href="https://www.facebook.com/lckrakow" target="_blank"><img src="{{ asset('img/FB-f-Logo__blue_100.png') }}" style="height: 20px;" /></a></li>*/
