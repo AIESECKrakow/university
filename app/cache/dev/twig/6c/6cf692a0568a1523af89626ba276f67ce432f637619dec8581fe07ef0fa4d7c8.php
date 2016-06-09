@@ -22,36 +22,36 @@ class __TwigTemplate_adba221063048a0e0e719b4432049f7f7879aec94778ace0e759880408c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_411b10957dacebb08c65d4a8497874c62757466b1d6b4f59fb7625e6759b26ae = $this->env->getExtension("native_profiler");
-        $__internal_411b10957dacebb08c65d4a8497874c62757466b1d6b4f59fb7625e6759b26ae->enter($__internal_411b10957dacebb08c65d4a8497874c62757466b1d6b4f59fb7625e6759b26ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/partners.html.twig"));
+        $__internal_504c69666e77d263f958532554f2eeeabc62fe7f86940548c9478695c3e92afa = $this->env->getExtension("native_profiler");
+        $__internal_504c69666e77d263f958532554f2eeeabc62fe7f86940548c9478695c3e92afa->enter($__internal_504c69666e77d263f958532554f2eeeabc62fe7f86940548c9478695c3e92afa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/partners.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_411b10957dacebb08c65d4a8497874c62757466b1d6b4f59fb7625e6759b26ae->leave($__internal_411b10957dacebb08c65d4a8497874c62757466b1d6b4f59fb7625e6759b26ae_prof);
+        $__internal_504c69666e77d263f958532554f2eeeabc62fe7f86940548c9478695c3e92afa->leave($__internal_504c69666e77d263f958532554f2eeeabc62fe7f86940548c9478695c3e92afa_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_42ff3f1d8966c589b0ea4e780126d4289f10af0a6b639ee14dcce2cd5ed49e84 = $this->env->getExtension("native_profiler");
-        $__internal_42ff3f1d8966c589b0ea4e780126d4289f10af0a6b639ee14dcce2cd5ed49e84->enter($__internal_42ff3f1d8966c589b0ea4e780126d4289f10af0a6b639ee14dcce2cd5ed49e84_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_0630cbbd17160925a22e7a57c9dd66b56c22aac885425b283d70f4753114c9f8 = $this->env->getExtension("native_profiler");
+        $__internal_0630cbbd17160925a22e7a57c9dd66b56c22aac885425b283d70f4753114c9f8->enter($__internal_0630cbbd17160925a22e7a57c9dd66b56c22aac885425b283d70f4753114c9f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Partnerzy | Warsztaty językowe AIESEC University";
         
-        $__internal_42ff3f1d8966c589b0ea4e780126d4289f10af0a6b639ee14dcce2cd5ed49e84->leave($__internal_42ff3f1d8966c589b0ea4e780126d4289f10af0a6b639ee14dcce2cd5ed49e84_prof);
+        $__internal_0630cbbd17160925a22e7a57c9dd66b56c22aac885425b283d70f4753114c9f8->leave($__internal_0630cbbd17160925a22e7a57c9dd66b56c22aac885425b283d70f4753114c9f8_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_5c75319eb6fe08fb26c7ecb70a2ff6c9c59e09f2d46cdae42befe4aa3656b4e5 = $this->env->getExtension("native_profiler");
-        $__internal_5c75319eb6fe08fb26c7ecb70a2ff6c9c59e09f2d46cdae42befe4aa3656b4e5->enter($__internal_5c75319eb6fe08fb26c7ecb70a2ff6c9c59e09f2d46cdae42befe4aa3656b4e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_313aa365a400b22401f96aa26937ffb85e1a34a1360ad1a60021d19465f4b697 = $this->env->getExtension("native_profiler");
+        $__internal_313aa365a400b22401f96aa26937ffb85e1a34a1360ad1a60021d19465f4b697->enter($__internal_313aa365a400b22401f96aa26937ffb85e1a34a1360ad1a60021d19465f4b697_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "        <div class=\"row\">
-            <div class=\"col-md-10 centered heading fontcolor\">
+            <div class=\"col-md-10 centered about fontcolor\">
                 <div class=\"logo text-center\"></div>
                 <br/>
                 <h3 class=\"text-center\"><strong>Nasi partnerzy</strong></h1>
@@ -182,7 +182,7 @@ class __TwigTemplate_adba221063048a0e0e719b4432049f7f7879aec94778ace0e759880408c
         </div>
 ";
         
-        $__internal_5c75319eb6fe08fb26c7ecb70a2ff6c9c59e09f2d46cdae42befe4aa3656b4e5->leave($__internal_5c75319eb6fe08fb26c7ecb70a2ff6c9c59e09f2d46cdae42befe4aa3656b4e5_prof);
+        $__internal_313aa365a400b22401f96aa26937ffb85e1a34a1360ad1a60021d19465f4b697->leave($__internal_313aa365a400b22401f96aa26937ffb85e1a34a1360ad1a60021d19465f4b697_prof);
 
     }
 
@@ -207,7 +207,7 @@ class __TwigTemplate_adba221063048a0e0e719b4432049f7f7879aec94778ace0e759880408c
 /* */
 /* {% block body %}*/
 /*         <div class="row">*/
-/*             <div class="col-md-10 centered heading fontcolor">*/
+/*             <div class="col-md-10 centered about fontcolor">*/
 /*                 <div class="logo text-center"></div>*/
 /*                 <br/>*/
 /*                 <h3 class="text-center"><strong>Nasi partnerzy</strong></h1>*/

@@ -128,4 +128,26 @@ class DefaultController extends Controller
     public function partnersAction() {
         return $this->render('default/partners.html.twig');
     }
+
+    /**
+     * @Route("/pricelist", name="pricelist")
+     */
+    public function priceAction()
+    {
+        return $this->render('default/pricelist.html.twig');
+    }
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function aboutAction () {
+        return $this->render('default/about.html.twig');
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contactAction() {
+        return $this->render('default/contact.html.twig');
+    }
 }
