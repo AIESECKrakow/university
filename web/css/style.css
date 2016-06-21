@@ -1,17 +1,148 @@
 html, body {
     height: 100%;
-    margin-top: 70px;
+    margin-top: 20px;
 }
+
+@font-face {
+    font-family: 'Museo300';
+    src: url('../fonts/Museo300-Regular-webfont.eot');
+    src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Museo300-Regular-webfont.woff') format('woff'), url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'), url('../fonts/Museo300-Regular-webfont.svg#Museo300Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, p {
+    font-family: Museo300;
+    color: white;
+}
+
+.about {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.about p {
+    text-align: justify;
+    font-size: 16px;
+}
+
+.centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.fontface {
+    font-family: Museo300;
+}
+
+.fontcolor {
+    color: white;
+}
+
+.nav-link {
+    font-family: Museo300;
+    font-size: 12pt;
+    color: #777777;
+}
+
+.content-container {
+    //margin-top: -20px;
+    background: url(../img/bg4-lg.jpg) #ffffff top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo {
+    background: url(../img/logo-white.png) no-repeat center center;
+    background-size: contain;
+    height: 100px;
+}
+@media (min-width: 768px) {
+    .logo {
+        margin-top: 100px;
+        height: 140px;
+    }
+}
+@media (min-width: 992px) {
+    .logo {
+        margin-top: 50px;
+        height: 140px;
+    }
+}
+@media (min-width: 1200px) {
+    .logo {
+        margin-top: 0px;
+        height: 140px;
+    }
+}
+
+.header {
+    padding-top: 20px;
+    color: white;
+}
+@media (min-width: 768px) {
+    .header {
+        height: 500px;
+        padding-top: 100px;
+        background: url(../img/header.jpg) no-repeat center;
+        border-bottom: 5px white solid;
+    }
+}
+
+.logo-header {
+    background: url(../img/logo-white.png) no-repeat center center;
+    background-size: contain;
+    height: 140px;
+}
+
+.flag {
+    width: 30%;
+    margin: 0 auto;
+}
+@media (min-width: 992px) {
+    .flag {
+        max-width: 100px;
+        width: 90%;
+    }
+}
+
+.icon {
+    width: 30%;
+    margin: 0 auto;
+}
+@media (min-width: 992px) {
+    .icon {
+        max-width: 100px;
+        width: 90%;
+    }
+}
+
+.point {
+    font-family: Museo300;
+    font-weight: 500;
+    line-height: 1.1;
+    color: white;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    font-size: 20px;
+}
+
 .footer-partners {
-    max-height: 20px;
-    max-width: 40px;
+    max-width: 100%;
+    max-height: 30px;
 }
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+.partners-logo {
+    max-width: 100%;
+    max-height: 100px;
+    padding: 10px;
 }
-.footer, .push {
-    height: 155px; /* .push must be the same height as .footer */
+
+.footer-logo {
+    max-width: 50%;
+    padding: 10px 0px 10px 0px;
+}
+@media (min-width: 768px) {
+    .footer-logo {
+        max-width: 80%;
+    }
 }
