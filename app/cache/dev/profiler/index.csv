@@ -239,3 +239,4 @@ b75508,127.0.0.1,GET,http://localhost:8000/img/soul-logo.jpg,1465432149,,404
 1575b4,127.0.0.1,GET,http://localhost:8000/,1465432304,,200
 70f163,127.0.0.1,GET,http://localhost:8000/,1465432358,,200
 90b625,127.0.0.1,GET,http://localhost:8000/,1465432388,,200
+bad0cd,::1,GET,http://localhost/aiesec/university/web/app_dev.php/,1466530989,,200

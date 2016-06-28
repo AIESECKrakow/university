@@ -816,3 +816,6 @@
 [2016-06-09 02:33:07] request.INFO: Matched route "homepage". {"route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://localhost:8000/"} []
 [2016-06-09 02:33:07] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2016-06-09 02:33:09] request.INFO: Matched route "_wdt". {"route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"90b625","_route":"_wdt"},"request_uri":"http://localhost:8000/_wdt/90b625"} []
+[2016-06-21 19:43:09] request.INFO: Matched route "homepage". {"route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://localhost/aiesec/university/web/app_dev.php/"} []
+[2016-06-21 19:43:09] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-06-21 19:43:09] request.INFO: Matched route "_wdt". {"route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"bad0cd","_route":"_wdt"},"request_uri":"http://localhost/aiesec/university/web/app_dev.php/_wdt/bad0cd"} []
