@@ -20,22 +20,13 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Validator\Constraints\Type;
 
-class DefaultController extends Controller
+class PartnersController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/partners", name="partners")
      */
-    public function indexAction()
-    {
-
-//        $g = new Level();
-//        $g->setLevel("wysoki");
-//        $g->setEnabled(boolval(true));
-//        $g->setCreatedAt(new \DateTime());
-//        $g->setUpdatedAt(new \DateTime());
-//        $this->getDoctrine()->getManager()->getRepository('AppBundle:Level')->saveNewLevel($g);
-        
-        return $this->render('default/index.html.twig');
+    public function partnersAction() {
+        return $this->render('default/partners.html.twig');
     }
-    
+
 }

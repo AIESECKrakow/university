@@ -20,22 +20,13 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Validator\Constraints\Type;
 
-class DefaultController extends Controller
+class PricelistController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/pricelist", name="pricelist")
      */
-    public function indexAction()
+    public function priceAction()
     {
-
-//        $g = new Level();
-//        $g->setLevel("wysoki");
-//        $g->setEnabled(boolval(true));
-//        $g->setCreatedAt(new \DateTime());
-//        $g->setUpdatedAt(new \DateTime());
-//        $this->getDoctrine()->getManager()->getRepository('AppBundle:Level')->saveNewLevel($g);
-        
-        return $this->render('default/index.html.twig');
+        return $this->render('default/pricelist.html.twig');
     }
-    
 }
