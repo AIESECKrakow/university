@@ -105,6 +105,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'AppBundle\\Controller\\ContactController::contactAction',  '_route' => 'contact',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -114,32 +119,45 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
-        // sign-up
-        if ($pathinfo === '/sign-up') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::signUpAction',  '_route' => 'sign-up',);
+        // news
+        if ($pathinfo === '/news') {
+            return array (  '_controller' => 'AppBundle\\Controller\\NewsController::newsAction',  '_route' => 'news',);
         }
 
         if (0 === strpos($pathinfo, '/p')) {
             // partners
             if ($pathinfo === '/partners') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::partnersAction',  '_route' => 'partners',);
+                return array (  '_controller' => 'AppBundle\\Controller\\PartnersController::partnersAction',  '_route' => 'partners',);
             }
 
-            // pricelist
-            if ($pathinfo === '/pricelist') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::priceAction',  '_route' => 'pricelist',);
+            if (0 === strpos($pathinfo, '/price')) {
+                // price
+                if ($pathinfo === '/price') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\PriceController::priceAction',  '_route' => 'price',);
+                }
+
+                // pricelist
+                if ($pathinfo === '/pricelist') {
+                    return array (  '_controller' => 'AppBundle\\Controller\\PricelistController::priceAction',  '_route' => 'pricelist',);
+                }
+
             }
 
+        }
+
+        // schedule
+        if ($pathinfo === '/schedule') {
+            return array (  '_controller' => 'AppBundle\\Controller\\ScheduleController::scheduleAction',  '_route' => 'schedule',);
         }
 
         // about
         if ($pathinfo === '/about') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::aboutAction',  '_route' => 'about',);
+            return array (  '_controller' => 'AppBundle\\Controller\\UniController::aboutAction',  '_route' => 'about',);
         }
 
-        // contact
-        if ($pathinfo === '/contact') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::contactAction',  '_route' => 'contact',);
+        // sign-up
+        if ($pathinfo === '/sign-up') {
+            return array (  '_controller' => 'AppBundle\\Controller\\SignUpController::signUpAction',  '_route' => 'sign-up',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
