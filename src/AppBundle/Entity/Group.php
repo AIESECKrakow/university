@@ -49,10 +49,12 @@ class Group
     private $start_hour;
 
 
+    // in minutes
     /**
      * @ORM\Column(type="integer")
      */
     private $length;
+
 
 
     /**
@@ -363,4 +365,10 @@ class Group
     {
         return $this->students;
     }
+
+    public function __toString()
+    {
+        return (string) $this->getLanguage() . (string)$this->getLevel();
+    }
+
 }

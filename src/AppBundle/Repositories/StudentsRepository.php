@@ -20,7 +20,7 @@ class StudentsRepository extends EntityRepository
         $em = $this->getEntityManager();
         $em->persist($student);
         $em->flush();
-        return new Response("Saved new group with id: ".$student->getId());
+        return new Response("Saved new student with id: ".$student->getId());
     }
 
     public function deleteStudent(Student $student)
@@ -29,6 +29,6 @@ class StudentsRepository extends EntityRepository
         $id = $student->getId();
         $em->remove($student);
         $em->flush();
-        return new Response("Removed group with id: ".$id);
+        return new Response("Removed student with id: ".$id);
     }
 }

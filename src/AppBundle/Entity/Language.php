@@ -171,4 +171,13 @@ class Language
     {
         return $this->groups;
     }
+
+    public function __toString()
+    {
+        return (string)$this->getName();
+    }
+
+    public function getLanguage(){
+        return $this;
+    }
 }
