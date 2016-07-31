@@ -6,6 +6,7 @@ use Doctrine\ORM\EntityManager;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
@@ -76,10 +77,14 @@ class SignUpType extends AbstractType
             ->add('language', EntityType::class, array(
             'class' => 'AppBundle:Language',
             'choice_label' => 'name',
+                'placeholder' => 'wybierz język',
 //            'expanded' => true,
                 'mapped' => false
-            )
-        );
+            ))
+            ->add('save', SubmitType::class, array(
+                'label' => 'Zapisz się!',
+                'attr' => array('class' => 'form-control btn btn-primary')
+            ));
 
         $formModifier = function (FormInterface $form, Language $language = null) {
             $groups = null === $language ? array() : $language->getGroups();

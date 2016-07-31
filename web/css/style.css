@@ -157,3 +157,8 @@ h1, h2, h3, h4, p {
     position: absolute;
     bottom: 0px;
 }
+
+.btn-primary{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}

@@ -107,7 +107,7 @@ class Group
      * Set description
      *
      * @param string $description
-     * @return Groups
+     * @return Group
      */
     public function setDescription($description)
     {
@@ -130,7 +130,7 @@ class Group
      * Set start_hour
      *
      * @param \DateTime $startHour
-     * @return Groups
+     * @return Group
      */
     public function setStartHour($startHour)
     {
@@ -153,7 +153,7 @@ class Group
      * Set length
      *
      * @param integer $length
-     * @return Groups
+     * @return Group
      */
     public function setLength($length)
     {
@@ -176,7 +176,7 @@ class Group
      * Set weekday
      *
      * @param string $weekday
-     * @return Groups
+     * @return Group
      */
     public function setWeekday($weekday)
     {
@@ -199,7 +199,7 @@ class Group
      * Set enabled
      *
      * @param boolean $enabled
-     * @return Groups
+     * @return Group
      */
     public function setEnabled($enabled)
     {
@@ -222,7 +222,7 @@ class Group
      * Set capacity
      *
      * @param integer $capacity
-     * @return Groups
+     * @return Group
      */
     public function setCapacity($capacity)
     {
@@ -245,7 +245,7 @@ class Group
      * Set created_at
      *
      * @param \DateTime $createdAt
-     * @return Groups
+     * @return Group
      */
     public function setCreatedAt($createdAt)
     {
@@ -268,7 +268,7 @@ class Group
      * Set updated_at
      *
      * @param \DateTime $updatedAt
-     * @return Groups
+     * @return Group
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -291,7 +291,7 @@ class Group
      * Set language
      *
      * @param \AppBundle\Entity\Language $language
-     * @return Groups
+     * @return Group
      */
     public function setLanguage(\AppBundle\Entity\Language $language = null)
     {
@@ -314,7 +314,7 @@ class Group
      * Set level
      *
      * @param \AppBundle\Entity\Level $level
-     * @return Groups
+     * @return Group
      */
     public function setLevel(\AppBundle\Entity\Level $level = null)
     {
@@ -337,7 +337,7 @@ class Group
      * Add students
      *
      * @param \AppBundle\Entity\Student $students
-     * @return Groups
+     * @return Group
      */
     public function addStudent(\AppBundle\Entity\Student $students)
     {

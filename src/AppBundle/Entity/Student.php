@@ -208,26 +208,26 @@ class Student
     }
 
     /**
-     * Add groups
-     *
-     * @param Group $groups
+     * Add group
+     * @param \AppBundle\Entity\Group $group
      * @return Student
      */
-    public function addGroup(Group $groups)
+    public function addGroup(Group $group)
     {
-        $this->group[] = $groups;
+        $this->group = $group;
 
         return $this;
     }
-
     /**
-     * Remove groups
-     *
-     * @param Group $groups
+     * setGroup
+     * @param \AppBundle\Entity\Group $group
+     * @return Student
      */
-    public function removeGroup(Group $groups)
+    public function setGroup(Group $group)
     {
-        $this->group->removeElement($groups);
+        $this->group = $group;
+
+        return $this;
     }
 
     /**
