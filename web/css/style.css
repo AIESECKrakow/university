@@ -1,6 +1,5 @@
 html, body {
     height: 100%;
-    margin-top: 20px;
 }
 
 @font-face {
@@ -46,7 +45,7 @@ h1, h2, h3, h4, p {
 }
 
 .content-container {
-    //margin-top: -20px;
+    margin-top: -20px;
     background: url(../img/bg_5.png) #ffffff top center;
     background-size: cover;
     background-attachment: fixed;
@@ -77,6 +76,7 @@ h1, h2, h3, h4, p {
 }
 
 .header {
+    position: relative;
     padding-top: 20px;
     color: white;
 }
@@ -127,6 +127,8 @@ h1, h2, h3, h4, p {
     font-size: 20px;
 }
 
+
+
 .footer-partners {
     max-width: 100%;
     max-height: 30px;
@@ -145,4 +147,13 @@ h1, h2, h3, h4, p {
     .footer-logo {
         max-width: 80%;
     }
+}
+
+.navbar {
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
 }

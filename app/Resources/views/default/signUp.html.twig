@@ -28,6 +28,7 @@
             // Simulate form data, but only include the selected sport value.
             var data = {};
             data[$language.attr('name')] = $language.val();
+            console.log(data);
             // Submit data via AJAX to the form's action path.
             $.ajax({
                 url : $form.attr('action'),

@@ -76,7 +76,7 @@ class SignUpType extends AbstractType
             ->add('language', EntityType::class, array(
             'class' => 'AppBundle:Language',
             'choice_label' => 'name',
-            'expanded' => true,
+//            'expanded' => true,
                 'mapped' => false
             )
         );
@@ -96,18 +96,16 @@ class SignUpType extends AbstractType
             function (FormEvent $event) use ($formModifier) {
                 // this would be your entity, i.e. Student
                 $data = $event->getForm()->get('language')->getData();
-                echo '<br><br><br><br><h1>AAAAA</h1>';
-                echo $data;
                 $formModifier($event->getForm(), $data);
             }
         );
 
-        $builder->addEventListener(
+        $builder->get('language')->addEventListener(
             FormEvents::POST_SUBMIT,
             function (FormEvent $event) use ($formModifier) {
                 // It's important here to fetch $event->getForm()->getData(), as
                 // $event->getData() will get you the client data (that is, the ID)
-                $language = $event->getForm()->get('language')->getData();
+                $language = $event->getForm()->getData();
                 // since we've added the listener to the child, we'll have to pass on
                 // the parent to the callback functions!
                 $formModifier($event->getForm()->getParent(), $language);
