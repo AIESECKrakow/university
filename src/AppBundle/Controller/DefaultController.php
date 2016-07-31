@@ -7,6 +7,7 @@ use AppBundle\Entity\Group;
 use AppBundle\Entity\Level;
 use AppBundle\Entity\Student;
 use AppBundle\Repositories\GroupsRepository;
+use AppBundle\Classes\LanguageGenerator;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\BrowserKit\Response;
@@ -34,6 +35,7 @@ class DefaultController extends Controller
 //        $g->setCreatedAt(new \DateTime());
 //        $g->setUpdatedAt(new \DateTime());
 //        $this->getDoctrine()->getManager()->getRepository('AppBundle:Level')->saveNewLevel($g);
+        //$languageGenerator = new LanguageGenerator();
         
         return $this->render('default/index.html.twig');
     }

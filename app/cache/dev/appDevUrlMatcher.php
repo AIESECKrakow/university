@@ -119,6 +119,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
+        // add_languages
+        if ($pathinfo === '/add-languages') {
+            return array (  '_controller' => 'AppBundle\\Controller\\LanguagesController::addLanguagesAction',  '_route' => 'add_languages',);
+        }
+
         // news
         if ($pathinfo === '/news') {
             return array (  '_controller' => 'AppBundle\\Controller\\NewsController::newsAction',  '_route' => 'news',);
@@ -145,19 +150,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // schedule
-        if ($pathinfo === '/schedule') {
-            return array (  '_controller' => 'AppBundle\\Controller\\ScheduleController::scheduleAction',  '_route' => 'schedule',);
+        if (0 === strpos($pathinfo, '/s')) {
+            // schedule
+            if ($pathinfo === '/schedule') {
+                return array (  '_controller' => 'AppBundle\\Controller\\ScheduleController::scheduleAction',  '_route' => 'schedule',);
+            }
+
+            // sign-up
+            if ($pathinfo === '/sign-up') {
+                return array (  '_controller' => 'AppBundle\\Controller\\SignUpController::signUpAction',  '_route' => 'sign-up',);
+            }
+
         }
 
         // about
         if ($pathinfo === '/about') {
             return array (  '_controller' => 'AppBundle\\Controller\\UniController::aboutAction',  '_route' => 'about',);
-        }
-
-        // sign-up
-        if ($pathinfo === '/sign-up') {
-            return array (  '_controller' => 'AppBundle\\Controller\\SignUpController::signUpAction',  '_route' => 'sign-up',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
