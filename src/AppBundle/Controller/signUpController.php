@@ -33,11 +33,16 @@ class SignUpController extends Controller
      */
     public function signUpAction(Request $request) {
 
-        $language = new Language();
-        $form = $this->createForm(SignUpType::class, $language);
+
+        $student = new Student();
+        //$languages = $this->getDoctrine()->getRepository('AppBundle:Language')->findAll();
+        $form = $this->createForm(SignUpType::class, $student);
         $form->handleRequest($request);
-
-
+        if($form->isSubmitted() && $form->isValid()) {
+            $doctrine = $this->getDoctrine()->getManager();
+            $doctrine->persist($form->getData());
+            $doctrine->flush();
+        }
         return $this->render(
             'default/signUp.html.twig',
             array('form' => $form->createView())
@@ -53,11 +58,9 @@ class SignUpController extends Controller
 
 
 
-//        $student = new Student();
-//
-//        $languages = $this->getDoctrine()->getRepository('AppBundle:Language')->findAll();
-//
-//
+
+
+        //$languages = $this->getDoctrine()->getRepository('AppBundle:Language')->findAll();
 //        foreach($languages as $language) {
 //            if ($language->getName() == 'spanish') {
 //                $groups = $this->getDoctrine()->getRepository('AppBundle:Group')->findBy(array('language' => $language->getName()));
@@ -67,9 +70,9 @@ class SignUpController extends Controller
 //                }
 //            }
 //        }
-//
-//
-//
+
+
+
 //        $form1 = $this->createFormBuilder($student)
 //            ->add('first_name', TextType::class, array(
 //                'constraints' => array(

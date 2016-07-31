@@ -9,15 +9,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repositories\StudentsRepository")
  * @ORM\Table(name="students")
- *
- * @UniqueEntity(
- *     fields={"email"},
- *     message="Użytkownik o podanych adresie email już istnieje."
- * )
- * @UniqueEntity(
- *     fields={"phone"},
- *     message="Użytkownik o podanych nr telefonu już istnieje."
- * )
  */
 
 class Student
@@ -41,13 +32,10 @@ class Student
     private $last_name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Group", inversedBy="students")
-     * @ORM\JoinTable(name="students_groups",
-     *     joinColumns={@ORM\JoinColumn(name="student_id", referencedColumnName="id")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
-     * )
+     * @ORM\ManyToOne(targetEntity="Group", inversedBy="students")
+     * @ORM\JoinColumn(name="group_id", referencedColumnName="id")
      */
-    private $groups;
+    private $group;
 
     /**
      * @ORM\Column(type="string", length=100)
@@ -70,13 +58,6 @@ class Student
      */
     private $updated_at;
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->groups = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Get id
@@ -234,7 +215,7 @@ class Student
      */
     public function addGroup(Group $groups)
     {
-        $this->groups[] = $groups;
+        $this->group[] = $groups;
 
         return $this;
     }
@@ -246,7 +227,7 @@ class Student
      */
     public function removeGroup(Group $groups)
     {
-        $this->groups->removeElement($groups);
+        $this->group->removeElement($groups);
     }
 
     /**
@@ -254,8 +235,8 @@ class Student
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getGroups()
+    public function getGroup()
     {
-        return $this->groups;
+        return $this->group;
     }
 }

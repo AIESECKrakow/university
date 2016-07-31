@@ -38,7 +38,7 @@ class Group
     private $level;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Student", mappedBy="groups")
+     * @ORM\OneToMany(targetEntity="Student", mappedBy="group")
      */
     private $students;
 
