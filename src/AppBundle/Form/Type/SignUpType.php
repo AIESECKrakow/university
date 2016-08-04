@@ -2,8 +2,11 @@
 namespace AppBundle\Form\Type;
 use AppBundle\Entity\Language;
 use AppBundle\Entity\Student;
+use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -27,6 +30,7 @@ use Symfony\Component\Validator\Constraints\Type;
 class SignUpType extends AbstractType
 {
 
+    private $em;
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -78,7 +82,6 @@ class SignUpType extends AbstractType
             'class' => 'AppBundle:Language',
             'choice_label' => 'name',
                 'placeholder' => 'wybierz język',
-//            'expanded' => true,
                 'mapped' => false
             ))
             ->add('save', SubmitType::class, array(
@@ -87,13 +90,18 @@ class SignUpType extends AbstractType
             ));
 
         $formModifier = function (FormInterface $form, Language $language = null) {
-            $groups = null === $language ? array() : $language->getGroups();
+            $chosen = null === $language ? 'none' : $language->getName();
 
-            $form->add('group', EntityType::class, array(
-                'class'       => 'AppBundle:Group',
-                'placeholder' => '',
-                'choices'     => $groups,
-            ));
+                $form->add('group', EntityType::class, array(
+                    'class' => 'AppBundle:Group',
+                    'placeholder' => 'wybierz grupę',
+                    'query_builder' => function (EntityRepository $er) use ($chosen) {
+                        return $er->createQueryBuilder('g')
+                            ->where('g.enabled = 1')
+                            ->andWhere('g.language = :chosen')
+                            ->setParameter("chosen", $chosen);
+                    },
+                ));
         };
 
         $builder->addEventListener(
@@ -124,5 +132,6 @@ class SignUpType extends AbstractType
     {
         $resolver->setDefaults(['data_class' => Student::class]);
     }
+
 
 }

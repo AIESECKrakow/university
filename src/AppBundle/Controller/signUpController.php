@@ -43,6 +43,22 @@ class SignUpController extends Controller
             $dateTime = new \DateTime('now');
             $student->setCreatedAt($dateTime);
             $student->setUpdatedAt($dateTime);
+
+            $group_id = $student->getGroup()->getId();
+
+            $query = $doctrine->getRepository('AppBundle:Group')
+                ->createQueryBuilder('g')
+                ->select('COUNT(s)')
+                ->leftJoin('g.students','s')
+                ->where('g.id = :chosen_group')
+                ->setParameter('chosen_group', $group_id)
+                ->getQuery();
+
+            if ($query->getSingleScalarResult() >= $student->getGroup()->getCapacity()){
+                $student->getGroup()->setEnabled(0);
+            }
+
+            $doctrine->persist($student->getGroup());
             $doctrine->persist($student);
             $doctrine->flush();
             $this->addFlash('notice', 'Rejestracja przebiegła pomyślnie.');
