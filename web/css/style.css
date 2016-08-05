@@ -46,9 +46,11 @@ h1, h2, h3, h4, p {
 
 .content-container {
     margin-top: -20px;
+    padding-bottom: 30px;
+    min-height: 700px;
     background: url(../img/bg_5.png) #ffffff top center;
     background-size: cover;
-    background-attachment: fixed;
+    //background-attachment: fixed;
 }
 
 .logo {
@@ -155,7 +157,6 @@ h1, h2, h3, h4, p {
 
 .footer {
     position: relative;
-    bottom: 0px;
 }
 
 .btn-primary{
