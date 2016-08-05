@@ -19,7 +19,7 @@ class Language
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="Group", mappedBy="language")
+     * @ORM\OneToMany(targetEntity="Group", mappedBy="language", cascade={"persist"})
      */
     private $groups;
 

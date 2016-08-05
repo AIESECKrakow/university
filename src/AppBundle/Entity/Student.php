@@ -32,7 +32,7 @@ class Student
     private $last_name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Group", inversedBy="students")
+     * @ORM\ManyToOne(targetEntity="Group", inversedBy="students", cascade={"persist"})
      * @ORM\JoinColumn(name="group_id", referencedColumnName="id")
      */
     private $group;

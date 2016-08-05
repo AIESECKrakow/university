@@ -19,48 +19,28 @@ class Group
 
 
     /**
-     * @ORM\Column(type="text")
-     */
-    private $description;
-
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Language", inversedBy="groups")
+     * @ORM\ManyToOne(targetEntity="Language", inversedBy="groups", cascade={"persist"})
      * @ORM\JoinColumn(name="language_id", referencedColumnName="name")
      */
     private $language;
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="Level", inversedBy="groups")
+     * @ORM\ManyToOne(targetEntity="Level", inversedBy="groups", cascade={"persist"})
      * @ORM\JoinColumn(name="level_id", referencedColumnName="level")
      */
     private $level;
 
     /**
-     * @ORM\OneToMany(targetEntity="Student", mappedBy="group")
+     * @ORM\OneToMany(targetEntity="Student", mappedBy="group", cascade={"persist"})
      */
     private $students;
 
-
     /**
-     * @ORM\Column(type="time")
+     * @ORM\OneToMany(targetEntity="Lesson", mappedBy="group", cascade={"persist"})
      */
-    private $start_hour;
+    private $lessons;
 
-
-    // in minutes
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $length;
-
-
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $weekday;
 
 
     /**
@@ -91,6 +71,7 @@ class Group
     public function __construct()
     {
         $this->students = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->lessons = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -103,104 +84,7 @@ class Group
         return $this->id;
     }
 
-    /**
-     * Set description
-     *
-     * @param string $description
-     * @return Group
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
 
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set start_hour
-     *
-     * @param \DateTime $startHour
-     * @return Group
-     */
-    public function setStartHour($startHour)
-    {
-        $this->start_hour = $startHour;
-
-        return $this;
-    }
-
-    /**
-     * Get start_hour
-     *
-     * @return \DateTime 
-     */
-    public function getStartHour()
-    {
-        return $this->start_hour;
-    }
-
-    /**
-     * Set length
-     *
-     * @param integer $length
-     * @return Group
-     */
-    public function setLength($length)
-    {
-        $this->length = $length;
-
-        return $this;
-    }
-
-    /**
-     * Get length
-     *
-     * @return integer 
-     */
-    public function getLength()
-    {
-        return $this->length;
-    }
-
-    /**
-     * Set weekday
-     *
-     * @param string $weekday
-     * @return Group
-     */
-    public function setWeekday($weekday)
-    {
-        $this->weekday = $weekday;
-
-        return $this;
-    }
-
-    /**
-     * Get weekday
-     *
-     * @return string 
-     */
-    public function getWeekday()
-    {
-        return $this->weekday;
-    }
-
-    /**
-     * Set enabled
-     *
-     * @param boolean $enabled
-     * @return Group
-     */
     public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
@@ -369,6 +253,39 @@ class Group
     public function __toString()
     {
         return (string) $this->getLanguage() . (string)$this->getLevel();
+    }
+
+    /**
+     * Add lessons
+     *
+     * @param \AppBundle\Entity\Lesson $lessons
+     * @return Group
+     */
+    public function addLesson(\AppBundle\Entity\Lesson $lessons)
+    {
+        $this->lessons[] = $lessons;
+
+        return $this;
+    }
+
+    /**
+     * Remove lessons
+     *
+     * @param \AppBundle\Entity\Lesson $lessons
+     */
+    public function removeLesson(\AppBundle\Entity\Lesson $lessons)
+    {
+        $this->lessons->removeElement($lessons);
+    }
+
+    /**
+     * Get lessons
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLessons()
+    {
+        return $this->lessons;
     }
 
 }

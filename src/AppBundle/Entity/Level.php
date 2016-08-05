@@ -19,7 +19,7 @@ class Level
     private $level;
 
     /**
-     * @ORM\OneToMany(targetEntity="Group", mappedBy="level")
+     * @ORM\OneToMany(targetEntity="Group", mappedBy="level", cascade={"persist"})
      */
     private $groups;
 

@@ -6,7 +6,7 @@
  * Time: 14:50
  */
 
-namespace AppBundle\Classes;
+namespace AppBundle\Generators;
 
 class LanguageGenerator {
     private $languages; //an array
@@ -14,10 +14,12 @@ class LanguageGenerator {
     public function __construct($file)
     {
         $xml = simplexml_load_file($file) or die('Cannot load a file.');
-
         //parses xml file into array
-        foreach ($xml as $language) {
-            $this->languages[] = array('name' => $language, 'enabled' => $language['enabled']);
+        foreach ($xml->children() as $language) {
+            $this->languages[] = array(
+                'name' => (string)$language->name,
+                'l_enabled' => (int)$language->l_enabled,
+                'groups' => $language->groups);
         };
     }
 
@@ -25,3 +27,4 @@ class LanguageGenerator {
         return $this->languages;
     }
 }
+
