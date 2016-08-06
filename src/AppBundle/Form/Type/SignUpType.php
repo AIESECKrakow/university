@@ -92,6 +92,7 @@ class SignUpType extends AbstractType
         $formModifier = function (FormInterface $form, Language $language = null) {
             $chosen = null === $language ? 'none' : $language->getName();
 
+                // w dropdownie widac $group->toString();
                 $form->add('group', EntityType::class, array(
                     'class' => 'AppBundle:Group',
                     'placeholder' => 'wybierz grupę',

@@ -18,10 +18,16 @@ h1, h2, h3, h4, p {
 .about {
     padding-top: 30px;
     padding-bottom: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    display: block;
+}
+
+#content{
+    min-height: 100%;
 }
 
 .about p {
-    text-align: justify;
     font-size: 16px;
 }
 
