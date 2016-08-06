@@ -31,4 +31,9 @@ class StudentsRepository extends EntityRepository
         $em->flush();
         return new Response("Removed student with id: ".$id);
     }
+
+    public function updateStudent(Student $student){
+        $em = $this->getEntityManager();
+        $em->flush($student);
+    }
 }

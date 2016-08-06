@@ -27,14 +27,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-
-//        $g = new Level();
-//        $g->setLevel("wysoki");
-//        $g->setEnabled(boolval(true));
-//        $g->setCreatedAt(new \DateTime());
-//        $g->setUpdatedAt(new \DateTime());
-//        $this->getDoctrine()->getManager()->getRepository('AppBundle:Level')->saveNewLevel($g);
-        
         return $this->render('default/index.html.twig');
     }
     

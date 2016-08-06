@@ -58,6 +58,8 @@ class SignUpController extends Controller
                 $student->getGroup()->setEnabled(0);
             }
 
+            $student->setDiscount("Nie"); //trzeba dodac wybor
+            $student->setPodioSynchronised(0);  //nie byl jeszcze synchronizowany
             $doctrine->persist($student->getGroup());
             $doctrine->persist($student);
             $doctrine->flush();

@@ -11,3 +11,7 @@ services:
         class: AppBundle\Form\Type\SignUpType
         tags:
             - { name: form.type }
+
+    podio_synchro:
+      class: AppBundle\Services\PodioSynch
+      arguments: ["@doctrine.orm.entity_manager"]

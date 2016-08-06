@@ -58,6 +58,16 @@ class Student
      */
     private $updated_at;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $podio_synchronised;
+
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $discount;
 
     /**
      * Get id
@@ -239,4 +249,39 @@ class Student
     {
         return $this->group;
     }
+
+    /**
+     * @return integer
+     */
+    public function getPodioSynchronised()
+    {
+        return $this->podio_synchronised;
+    }
+
+    /**
+     * @param integer $podio_synchronised
+     * @return integer
+     */
+    public function setPodioSynchronised($podio_synchronised)
+    {
+        $this->podio_synchronised = $podio_synchronised;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getDiscount()
+    {
+        return $this->discount;
+    }
+
+    /**
+     * @param string $discount
+     */
+    public function setDiscount($discount)
+    {
+        $this->discount = $discount;
+    }
+
 }
