@@ -58,12 +58,16 @@ class SignUpController extends Controller
                 $student->getGroup()->setEnabled(0);
             }
 
-            $student->setDiscount("Nie"); //trzeba dodac wybor
             $student->setPodioSynchronised(0);  //nie byl jeszcze synchronizowany
             $doctrine->persist($student->getGroup());
             $doctrine->persist($student);
             $doctrine->flush();
             $this->addFlash('notice', 'Rejestracja przebiegła pomyślnie.');
+            return $this->render(
+                ':default:confirmation.html.twig',
+                array('form' => $form->createView(),
+                    'name' => $student->getFirstName())
+            );
         }
         return $this->render(
             'default/signUp.html.twig',

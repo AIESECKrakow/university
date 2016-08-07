@@ -82,7 +82,7 @@ class PodioSynch
             ));
             $item->save();
 
-            //$this->repo->updateStudent($student);
+            $this->repo->updateStudent($student);
         }
 
     }

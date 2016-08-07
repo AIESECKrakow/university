@@ -252,7 +252,7 @@ class Group
 
     public function __toString()
     {
-        return (string) $this->getLanguage() . (string)$this->getLevel();
+        return (string)$this->getLevel();
     }
 
     /**

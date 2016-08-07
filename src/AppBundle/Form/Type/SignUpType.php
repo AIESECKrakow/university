@@ -8,7 +8,10 @@ use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -78,11 +81,18 @@ class SignUpType extends AbstractType
                 'label' => 'Nr telefonu',
                 'attr' => array('class' => 'form-control')))
 
+            ->add('discount', ChoiceType::class, array(
+                'choices' => array(
+                    'Nie' => 'Nie',
+                    'Tak' => 'Tak',
+                )
+            ))
             ->add('language', EntityType::class, array(
             'class' => 'AppBundle:Language',
             'choice_label' => 'name',
                 'placeholder' => 'wybierz język',
-                'mapped' => false
+                'mapped' => false,
+                'attr' => array('class' => 'selectpicker')
             ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Zapisz się!',
@@ -92,12 +102,15 @@ class SignUpType extends AbstractType
         $formModifier = function (FormInterface $form, Language $language = null) {
             $chosen = null === $language ? 'none' : $language->getName();
 
-                // w dropdownie widac $group->toString();
                 $form->add('group', EntityType::class, array(
                     'class' => 'AppBundle:Group',
                     'placeholder' => 'wybierz grupę',
+                    'expanded' => true,
+                    'attr' => array('class' => 'radio'),
                     'query_builder' => function (EntityRepository $er) use ($chosen) {
                         return $er->createQueryBuilder('g')
+                            ->addSelect('l')
+                            ->join('g.lessons', 'l')
                             ->where('g.enabled = 1')
                             ->andWhere('g.language = :chosen')
                             ->setParameter("chosen", $chosen);

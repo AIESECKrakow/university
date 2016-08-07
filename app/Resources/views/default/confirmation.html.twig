@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dziękujemy!{% endblock %}
+
+{% block body %}
+
+<div id="content">
+
+    <div id="thankyou-row" class="row">
+        <div class="col-md-8 centered thankyou fontface fontcolor">
+            <h1 id="thankyou-msg" class="thankyou-msg text-center">{{ name }}, dziękujemy za zapisanie się na warsztaty!</h1>
+            <p class="thankyou-msg text-center">W ciągu 24 godzin otrzymasz od nas wiadomość z ważnymi informacjami.</p>
+            <p class="thankyou-msg text-center">A gdyby jej nie było, sprawdź folder spamu lub zakładkę Oferty w Gmailu, lub skontaktuj się z nami.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
