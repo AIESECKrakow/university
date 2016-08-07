@@ -1,0 +1,53 @@
+{% block formextra_recaptcha_widget %}
+{% spaceless %}
+    <script type="text/javascript">
+        var RecaptchaOptions = {{ widget_options|default({})|json_encode|raw }};
+    </script>
+
+    <script type="text/javascript" src="//www.google.com/recaptcha/api/challenge?k={{ public_key }}"></script>
+    <noscript>
+        <iframe src="//www.google.com/recaptcha/api/noscript?k={{ public_key }}" height="300" width="500" frameborder="0"></iframe>
+        {{ form_widget(form.recaptcha_challenge_field) }}
+        {{ form_widget(form.recaptcha_response_field) }}
+    </noscript>
+{% endspaceless %}
+{% endblock %}
+
+{% block formextra_image_widget %}
+{% spaceless %}
+    <div class="form_image">
+        {% if image_uri is defined %}
+        <img src="{{ asset(image_uri) }}" alt="{{ image_alt }}"{% if image_height > 0 %} height="{{ image_height }}"{% endif %}{% if image_width > 0 %} width="{{ image_width }}"{% endif %}/>
+        {% else %}
+        {% trans %}No image uploaded.{% endtrans %}
+        {% endif %}
+    </div>
+
+    {% set type = type|default('text') %}
+    <input type="{{ type }}" {{ block('widget_attributes') }} value="{{ value }}" />
+{% endspaceless %}
+{% endblock %}
+
+{% block formextra_fileset_widget %}
+    <ul>
+    {% for file in files %}
+        {% spaceless %}
+        <li>
+            {{ file }}
+            {% if delete_route is not empty and delete_id is not empty %}
+                <a href="{{ path(delete_route, {"id": delete_id, "file": file}) }}">[{% trans %}Delete{% endtrans %}]</a>
+            {% endif %}
+        </li>
+        {% endspaceless %}
+    {% endfor %}
+    </ul>
+
+    {% set type = type|default('text') %}
+    <input type="{{ type }}" {{ block('widget_attributes') }} value="{{ value }}" />
+{% endblock %}
+
+{% block formextra_plain_widget %}
+    <div {{ block('container_attributes') }}>
+        <p {{ block('widget_attributes') }}>{{ value|escape }}</p>
+    </div>
+{% endblock %}
