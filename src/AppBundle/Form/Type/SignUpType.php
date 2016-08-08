@@ -109,8 +109,6 @@ class SignUpType extends AbstractType
                     'attr' => array('class' => 'radio'),
                     'query_builder' => function (EntityRepository $er) use ($chosen) {
                         return $er->createQueryBuilder('g')
-                            ->addSelect('l')
-                            ->join('g.lessons', 'l')
                             ->where('g.enabled = 1')
                             ->andWhere('g.language = :chosen')
                             ->setParameter("chosen", $chosen);

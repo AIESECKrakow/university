@@ -58,7 +58,7 @@ class SignUpController extends Controller
                 $student->getGroup()->setEnabled(0);
             }
 
-            $student->setPodioSynchronised(0);  //nie byl jeszcze synchronizowany
+            $student->setPodioSynchronised(0);  //wasn't synchronised
             $doctrine->persist($student->getGroup());
             $doctrine->persist($student);
             $doctrine->flush();
