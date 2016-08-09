@@ -17,6 +17,10 @@ class Group
      */
     private $id;
 
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $city;
 
     /**
      * @ORM\ManyToOne(targetEntity="Language", inversedBy="groups", cascade={"persist"})
@@ -287,5 +291,24 @@ class Group
     {
         return $this->lessons;
     }
+
+    /**
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param string $city
+     * @return Group
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+        return $this;
+    }
+
 
 }

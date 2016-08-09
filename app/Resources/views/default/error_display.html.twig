@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Błąd!{% endblock %}
+
+{% block body %}
+
+    <div id="content">
+
+        <div id="thankyou-row" class="row">
+            <div class="col-md-8 centered thankyou fontface fontcolor">
+                <h1 id="thankyou-msg" class="thankyou-msg text-center">{{ name }}, coś poszło nie tak.</h1>
+                <p class="thankyou-msg text-center">Niestety Twój formularz nie zostal zapisany, ze względu na tajemniczy błąd.<a href="/sign-up">Spróbujesz ponownie?</a> </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

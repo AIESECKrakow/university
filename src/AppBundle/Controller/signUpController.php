@@ -38,8 +38,22 @@ class SignUpController extends Controller
         $form = $this->createForm(SignUpType::class, $student);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $selected_city = $form->get('city')->getData()->getCity();
+
             $doctrine = $this->getDoctrine()->getManager();
             $student = $form->getData();
+            $actual_city = $student->getGroup()->getCity();
+
+            if($actual_city != $selected_city){
+                return $this->render(
+                    ':default:error_display.html.twig',
+                    array('form' => $form->createView(),
+                        'name' => $student->getFirstName())
+                );
+            }
+
+
             $dateTime = new \DateTime('now');
             $student->setCreatedAt($dateTime);
             $student->setUpdatedAt($dateTime);

@@ -1,7 +1,16 @@
 var $language = $('#sign_up_language');
+var city = $('#sign_up_city');
+
+var selected_city;
+
+city.change(function () {
+    var e = document.getElementById('sign_up_city');
+    selected_city = e.options[e.selectedIndex].text;
+});
 
 // When language gets selected ...
 $language.change(function() {
+    console.log(selected_city);
     $('#groups-choice').hide();
     $('.loader').show();
     // ... retrieve the corresponding form.
@@ -36,25 +45,35 @@ function getDescription(language){
     $.ajax ({
         url: lessonCall,
         success: function(result){
+            var same = 0;
             for (var key in result) {
                 if (result.hasOwnProperty(key)) {
                     lessons='';
                     lessons += '<div class="group_info">';
+                    same = 0;
                     for (var k in result[key]){
                         if (result[key].hasOwnProperty(k)){
-                            console.log(key + " / " + k + " -> " + result[key][k]['day'] + " " + result[key][k]['hour'] );
-                            var tempday = result[key][k]['day']
-                            var temphour = result[key][k]['hour']
-                            lessons += '<div class="row_info">' + tempday + " \- " + temphour +'</div>'
+                            if(result[key][k]['city'] == selected_city) {
+                                same = 1;
+                                console.log(key + " / " + k + " -> " + result[key][k]['day'] + " " + result[key][k]['hour']);
+                                var tempday = result[key][k]['day'];
+                                var temphour = result[key][k]['hour'];
+                                lessons += '<div class="row_info">' + tempday + " \- " + temphour + '</div>'
+                            }
                         }
                     }
-                    lessons += '</div>';
                     var id = "sign_up_group_" + key;
-                    document.getElementById(id).parentElement.insertAdjacentHTML('afterend',lessons);
-                    $('.loader').hide();
-                    $(document.getElementById('groups-choice')).slideDown(350);
+                    if (same == 1) {
+                        lessons += '</div>';
+                        document.getElementById(id).parentElement.insertAdjacentHTML('afterend', lessons);
+                    }
+                    else {
+                        $(document.getElementById(id).parentElement.parentElement).hide();
+                    }
                 }
             }
+            $('.loader').hide();
+            $(document.getElementById('groups-choice')).slideDown(350);
         },
         dataType: 'json'
     });

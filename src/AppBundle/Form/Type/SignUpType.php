@@ -94,6 +94,18 @@ class SignUpType extends AbstractType
                 'mapped' => false,
                 'attr' => array('class' => 'selectpicker')
             ))
+            ->add('city', EntityType::class, array(
+                'class' => 'AppBundle:Group',
+                'choice_label' => 'city',
+                'placeholder' => 'wybierz miasto',
+                'mapped' => false,
+                'attr' => array('class' => 'selectpicker'),
+                "query_builder" => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('g')
+                        ->where('g.enabled = 1')
+                        ->groupBy('g.city');
+                    },
+            ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Zapisz się!',
                 'attr' => array('class' => 'form-control btn btn-primary')

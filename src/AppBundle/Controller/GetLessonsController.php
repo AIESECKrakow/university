@@ -22,6 +22,7 @@ class GetLessonsController extends Controller{
                 $t = new ArrayCollection();
                 $t->set('day', $lesson->getWeekday());
                 $t->set('hour', $lesson->getStartHour()->format("H:i"));
+                $t->set('city', $group->getCity());
                 $tmp->set($lesson->getId(), $t->toArray());
             }
             $result->set($group->getId(), $tmp->toArray());
