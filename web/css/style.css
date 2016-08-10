@@ -185,6 +185,7 @@ h1, h2, h3, h4, p {
     display: none;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 30px;
     border: 8px solid #f3f3f3;
     border-radius: 50%;
     border-top: 8px solid #3498db;
@@ -259,7 +260,7 @@ input[type="checkbox"]:focus {
     min-height: 22px;
     padding-left: 20px;
     margin-bottom: 0;
-    font-weight: normal;
+    font-weight: 600;
     cursor: pointer;
 }
 .radio input[type="radio"],
@@ -272,7 +273,7 @@ input[type="checkbox"]:focus {
 }
 .radio + .radio,
 .checkbox + .checkbox {
-    margin-top: -5px;
+    margin-top: 5px;
 }
 .radio-inline,
 .checkbox-inline {
@@ -383,7 +384,7 @@ fieldset[disabled] .checkbox label {
 .group_info{
     float: right;
     margin-left: 20px;
-    margin-right: 180px;
+    margin-right: 210px;
     margin-top: 10px;
     font-weight: bolder;
     margin-bottom: 10px;
@@ -391,4 +392,19 @@ fieldset[disabled] .checkbox label {
 
 .form-group{
     margin-bottom: 0;
+}
+
+.container > a{
+    font-weight: 900;
+    color: #FFFFFF;
+    font-size: large;
+}
+
+.control-label{
+    display: block;
+}
+
+
+#sign_up_language{
+    margin-bottom: 30px;
 }

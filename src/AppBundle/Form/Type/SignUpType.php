@@ -92,7 +92,7 @@ class SignUpType extends AbstractType
             'choice_label' => 'name',
                 'placeholder' => 'wybierz język',
                 'mapped' => false,
-                'attr' => array('class' => 'selectpicker')
+                'attr' => array('class' => 'selectpicker', 'disabled' =>'true')
             ))
             ->add('city', EntityType::class, array(
                 'class' => 'AppBundle:Group',
@@ -108,7 +108,7 @@ class SignUpType extends AbstractType
             ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Zapisz się!',
-                'attr' => array('class' => 'form-control btn btn-primary')
+                'attr' => array('class' => 'form-control btn btn-primary', "disabled" => 'true ')
             ));
 
         $formModifier = function (FormInterface $form, Language $language = null) {

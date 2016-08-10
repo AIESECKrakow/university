@@ -76,7 +76,6 @@ class SignUpController extends Controller
             $doctrine->persist($student->getGroup());
             $doctrine->persist($student);
             $doctrine->flush();
-            $this->addFlash('notice', 'Rejestracja przebiegła pomyślnie.');
             return $this->render(
                 ':default:confirmation.html.twig',
                 array('form' => $form->createView(),

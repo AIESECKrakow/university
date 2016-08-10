@@ -6,6 +6,7 @@ var selected_city;
 city.change(function () {
     var e = document.getElementById('sign_up_city');
     selected_city = e.options[e.selectedIndex].text;
+    $('#sign_up_language').prop('disabled', false)
 });
 
 // When language gets selected ...
@@ -74,6 +75,7 @@ function getDescription(language){
             }
             $('.loader').hide();
             $(document.getElementById('groups-choice')).slideDown(350);
+            $('#sign_up_save').prop('disabled', false);
         },
         dataType: 'json'
     });
