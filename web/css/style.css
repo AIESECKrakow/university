@@ -54,7 +54,7 @@ h1, h2, h3, h4, p {
     margin-top: -20px;
     padding-bottom: 30px;
     min-height: 700px;
-    background: url(../img/bg_5.png) #ffffff top center;
+    background: url(../img/bg/bg_5.png) #ffffff top center;
     background-size: cover;
     //background-attachment: fixed;
 }
