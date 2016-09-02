@@ -408,3 +408,31 @@ fieldset[disabled] .checkbox label {
 #sign_up_language{
     margin-bottom: 30px;
 }
+
+/*===============================================*/
+
+/*Schedule*/
+
+/*===============================================*/
+.schedule {
+    background-color: #9cc2ff;
+    padding: 10px 10px 10px 10px;
+}
+
+.schedule h4 {
+    color: black;
+    font-weight: bold;
+}
+
+.schedule p {
+    color: black;
+}
+
+.schedule-item {
+    border-right: dotted black;
+}
+
+.schedule-lesson {
+    border-top: dotted black 0.5px;
+    background-color: #ebff9d;
+}
