@@ -19,6 +19,7 @@ class GroupGenerator
         foreach ($xml->children() as $group) {
             $this->groups[] = array(
                 'level_id' => (string)$group->level_id,
+                'internal_number' =>(int)$group->internal_number,
                 'g_enabled' => (int)$group->g_enabled,
                 'capacity' => (int)$group->capacity,
                 'lessons' => $group->lessons);

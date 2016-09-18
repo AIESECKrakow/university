@@ -17,3 +17,7 @@ $(document).ready(function() {
       }
    });
 });
+
+$('.btn-city').on('click', function(event){
+    window.open(window.location.href + "?city=" + event.target.value, "_self");
+});

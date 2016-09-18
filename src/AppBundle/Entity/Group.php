@@ -46,7 +46,6 @@ class Group
     private $lessons;
 
 
-
     /**
      * @ORM\Column(type="boolean")
      */
@@ -69,6 +68,13 @@ class Group
      * @ORM\Column(type="datetime")
      */
     private $updated_at;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $internal_number;
+
+
     /**
      * Constructor
      */
@@ -311,4 +317,28 @@ class Group
     }
 
 
+
+    /**
+     * Set internalNumber
+     *
+     * @param integer $internalNumber
+     *
+     * @return Group
+     */
+    public function setInternalNumber($internalNumber)
+    {
+        $this->internal_number = $internalNumber;
+    
+        return $this;
+    }
+
+    /**
+     * Get internalNumber
+     *
+     * @return integer
+     */
+    public function getInternalNumber()
+    {
+        return $this->internal_number;
+    }
 }

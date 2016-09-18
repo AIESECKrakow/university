@@ -5,126 +5,64 @@
         <div class="row">
             <h2 class="text-center">Aktualny harmonogram zajęć</h2>
         </div>
-        <!--Dropdown-->
-        <div class="row">
-            <div class="col-md-2">
-                <select class="form-control schedule-dropdown">
-                    {# Dynamic generates options #}
-                    {% for languageName in languagesNames%}
-                        <option value="{{ languageName }}">{{ languageName }}</option>
-                    {% endfor %}
-                </select>
+
+        {% if city is defined %}
+            <div class="row" id="schedule-menu-row">
+                <div class="col-sm-5 col-sm-offset-1">
+                    <h3>Wybierz miasto</h3>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default btn-city {% if city == 'krakow' %}active{% endif %}" value="krakow">Kraków</button>
+                        <button type="button" class="btn btn-default btn-city {% if city == 'nowy_sacz' %}active{% endif %}" value="nowy_sacz">Nowy Sącz</button>
+                    </div>
+                </div>
+
+                <!--Dropdown-->
+                <div class="col-sm-5">
+                        <h3>Wybierz język</h3>
+                        <select class="form-control schedule-dropdown">
+                            Dynamic generates options
+                            {% for languageName in languagesNames%}
+                                <option value="{{ languageName }}">{{ languageName }}</option>
+                            {% endfor %}
+                        </select>
+                </div>
+                <!--End Dropdown-->
+
             </div>
-        </div>
-        <!--End Dropdown-->
+            <!--Schedule-->
 
-        <!--Schedule-->
+            <div class="row schedule">
+                {% for key, day in weekdays %}
+                    <div class="{% if loop.first %}col-md-offset-1{% endif %} col-md-2 schedule-item">
+                        <h4 class="text-center">{{ day }}</h4>
+                        <div class="row">
+                            {% for lesson in lessons|sort %}
+                                {% if lesson.weekday == key %}
+                                    <div class="col-md-12 schedule-lesson {{ lesson.languageName }} {{ lesson.levelName }}">
+                                        <p><strong>{{ lesson.levelName }} gr. {{ lesson.group_number }}</strong></p>
+                                        <p>{{ lesson.startHour }} - {{ lesson.stopHour }}</p>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
 
-        <div class="row schedule">
-
-            <!--Monday-->
-            <div class="col-md-2 schedule-item">
-                <h4 class="text-center">Poniedziałek</h4>
-                <div class="row">
-                    {% for lesson in lessons|sort %}
-                        {% if lesson.weekday == 'monday'%}
-                            <div class="col-md-12 schedule-lesson {{ lesson.languageName }}">
-                                <p><strong>{{ lesson.languageName }}</strong></p>
-                                <p>{{ lesson.startHour }} - {{ lesson.stopHour }}</p>
-                                <p>Opis</p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+            </div>
+        {% else %}
+            <div class="row">
+                <h3>Wybierz miasto</h3>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-city" value="krakow">Kraków</button>
+                    <button type="button" class="btn btn-default btn-city" value="nowy_sacz">Nowy Sącz</button>
                 </div>
             </div>
-            <!--End Monday-->
+        {% endif %}
 
-            <!--Tuesday-->
-            <div class="col-md-2 schedule-item">
-                <h4 class="text-center">Wtorek</h4>
-                <div class="row">
-                    {% for lesson in lessons|sort %}
-                        {% if lesson.weekday == 'tuesday'%}
-                            <div class="col-md-12 schedule-lesson {{ lesson.languageName }}">
-                                <p><strong>{{ lesson.languageName }}</strong></p>
-                                <p>{{ lesson.startHour }} - {{ lesson.stopHour }}</p>
-                                <p>Opis</p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-            <!--End Tuesday-->
+        {% if city is defined %}
 
-            <!--Wednesday-->
-            <div class="col-md-2 schedule-item">
-                <h4 class="text-center">Środa</h4>
-                <div class="row">
-                    {% for lesson in lessons|sort %}
-                        {% if lesson.weekday == 'wednesday'%}
-                            <div class="col-md-12 schedule-lesson {{ lesson.languageName }}">
-                                <p><strong>{{ lesson.languageName }}</strong></p>
-                                <p>{{ lesson.startHour }} - {{ lesson.stopHour }}</p>
-                                <p>Opis</p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-            <!--End Wednesday-->
 
-            <!--Thursday-->
-            <div class="col-md-2 schedule-item">
-                <h4 class="text-center">Czwartek</h4>
-                <div class="row">
-                    {% for lesson in lessons|sort %}
-                        {% if lesson.weekday == 'thursday'%}
-                            <div class="col-md-12 schedule-lesson {{ lesson.languageName }}">
-                                <p><strong>{{ lesson.languageName }}</strong></p>
-                                <p>{{ lesson.startHour }} - {{ lesson.stopHour }}</p>
-                                <p>Opis</p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-            <!--End Thursday-->
-
-            <!--Friday-->
-            <div class="col-md-2 schedule-item">
-                <h4 class="text-center">Piątek</h4>
-                <div class="row">
-                    {% for lesson in lessons|sort %}
-                        {% if lesson.weekday == 'friday'%}
-                            <div class="col-md-12 schedule-lesson {{ lesson.languageName }}">
-                                <p><strong>{{ lesson.languageName }}</strong></p>
-                                <p>{{ lesson.startHour }} - {{ lesson.stopHour }}</p>
-                                <p>Opis</p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-            <!--End Friday-->
-
-            <!--Saturday-->
-            <div class="col-md-2 schedule-item">
-                <h4 class="text-center">Sobota</h4>
-                <div class="row">
-                    {% for lesson in lessons|sort %}
-                        {% if lesson.weekday == 'saturday'%}
-                            <div class="col-md-12 schedule-lesson {{ lesson.languageName }}">
-                                <p><strong>{{ lesson.languageName }}</strong></p>
-                                <p>{{ lesson.startHour }} - {{ lesson.stopHour }}</p>
-                                <p>Opis</p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-            <!--End Saturday-->
-
-        </div>
-        <!--End Schedule-->
+            <!--End Schedule-->
+        {% endif %}
     </div>
 {% endblock%}

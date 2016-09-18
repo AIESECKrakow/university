@@ -45,6 +45,7 @@ class LanguagesController extends Controller
                 $g->setUpdatedAt(new \DateTime());
                 $level = $er->find($group['level_id']);
                 $g->setLevel($level);
+                $g->setInternalNumber($group['internal_number']);
                 $g->setCapacity($group['capacity']);
                 $g->setEnabled($group['g_enabled']);
                 $g->setLanguage($lng);
