@@ -38,10 +38,15 @@ class ScheduleController extends Controller
                 $startHour = $startHour->format('H:i');
                 $stopHour = $stopHour->format('H:i');
                 $weekday = $lesson->getWeekday();
-                $languageName = $lesson
-                    ->getGroup()
-                    ->getLanguage()
-                    ->getName();
+                $tmp = '';
+
+                if($lesson->getGroup()->getCity() === 'Nowy Sącz'){
+                    $tmp = 'nowy_sacz';
+                } else{
+                    $tmp = 'krakow';
+                }
+
+                $languageName =  $tmp . "-" . $lesson->getGroup()->getLanguage()->getName();
                 $levelName = $lesson->getGroup()->getLevel()->getLevel();
                 $groupNumber = $lesson->getGroup()->getInternalNumber();
                 $city = $lesson->getGroup()->getCity();
