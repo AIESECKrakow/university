@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="col-md-12">
+    <div class="col-sm-12">
     {% for flash_message in app.session.flashbag.get('notice') %}
         <div class="alert alert-success" role="alert">{{ flash_message }}</div>
     {% endfor %}
     </div>
 
     <div class="header">
-        <div class="col-md-12">
-            <div class="col-md-10 centered">
+        <div class="col-sm-12">
+            <div class="col-sm-10 centered">
                 <div class="logo-header text-center"></div>
 
-                <h1 class="text-center">Warsztaty językowe z native speakerami</h1>
+                <h1 class="text-center">Warsztaty językowe z zagranicznymi lektorami</h1>
                 <h3 class="text-center">8 zł za godzinę, w centrum Krakowa</h3>
 
             </div>
@@ -23,64 +23,62 @@
     <!-- FLAGS -->
 
     <div class="row">
-        <div class="col-md-12 centered fontface fontcolor" style="margin-top: 40px; min-height: 0;">
+        <div class="col-sm-12 centered fontface fontcolor" style="margin-top: 40px; min-height: 0;">
 
-            <div class="col-md-2 col-md-offset-3 text-center">
-                <div class="col-md-12">
+            <div class="col-sm-2 text-center">
+                <div class="col-sm-12">
                     <h4>ANGIELSKI</h4><h4> </h4>
                 </div>
-                <div class="col-md-12">
-                    <img class="flag" src="img/flags/flaga-en.png" />
+                <div class="col-sm-12">
+                    <img class="flag img img-responsive" src="img/flags/flaga-en.png" />
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="col-md-12">
-                    <h4>JAPOŃSKI</h4><h4> </h4>
+            <div class="col-sm-2 text-center">
+                <div class="col-sm-12">
+                    <h4>ROSYJSKI</h4><h4> </h4>
                 </div>
-                <div class="col-md-12">
-                    <img class="flag" src="img/flags/flaga_jpn.png" />
+                <div class="col-sm-12">
+                    <img class="flag img img-responsive" src="img/flags/flaga-ru.png" />
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="col-md-12">
+            <div class="col-sm-2 text-center">
+                <div class="col-sm-12">
                     <h4>NIEMIECKI</h4><h4> </h4>
                 </div>
-                <div class="col-md-12">
-                    <img class="flag" src="img/flags/flaga-de.png" />
+                <div class="col-sm-12">
+                    <img class="flag img img-responsive" src="img/flags/flaga-de.png" />
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 centered fontface fontcolor" style="margin-top: 40px; min-height: 0;">
+        <div class="col-sm-12 centered fontface fontcolor" style="margin-top: 40px; min-height: 0;">
 
-            <div class="col-md-2 col-md-offset-3 text-center">
-                <div class="col-md-12">
+            <div class="col-sm-2 text-center">
+                <div class="col-sm-12">
                     <h4>FRANCUSKI</h4><h4> </h4>
                 </div>
-                <div class="col-md-12">
-                    <img class="flag" src="img/flags/flaga-fr.png" />
+                <div class="col-sm-12">
+                    <img class="flag img img-responsive" src="img/flags/flaga-fr.png" />
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="col-md-12">
+            <div class="col-sm-2 text-center">
+                <div class="col-sm-12">
                     <h4>WŁOSKI</h4>
                 </div>
-                <div class="col-md-12">
-                    <img class="flag" src="img/flags/flaga-it.png" />
+                <div class="col-sm-12">
+                    <img class="flag img img-responsive" src="img/flags/flaga-it.png" />
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="col-md-12">
+            <div class="col-sm-2 text-center">
+                <div class="col-sm-12">
                     <h4>HISZPAŃSKI</h4>
                     <h4> </h4>
                 </div>
-                <div class="col-md-12">
-                    <img class="flag" src="img/flags/flaga-es.png" />
+                <div class="col-sm-12">
+                    <img class="flag img img-responsive" src="img/flags/flaga-es.png" />
                 </div>
 
             </div>
@@ -88,80 +86,80 @@
     </div>
 
     <div class="row">
-        <div class="col-md-10 col-md-offset-1 fontface fontcolor" style="padding-top: 40px;">
+        <div class="col-sm-10 col-sm-offset-1 fontface fontcolor" style="padding-top: 40px;">
             <h2 class="text-center" style="padding-bottom: 40px;">Tylko 199 zł za 8 tygodni warsztatów</h2>
 
-            <div class="col-md-12">
+            <div class="col-sm-12">
                 <!-- left column -->
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="row">
-                        <div class="col-md-3 text-center h4">
+                        <div class="col-sm-3 text-center h4">
                             <img class="icon" src="img/home_icons/icon1.png" />
                         </div>
-                        <div class="col-md-9 point">
-                            zajęcia w formie konwersatoriów z native speakerami o międzynarodowym doświadczeniu
+                        <div class="col-sm-9 point">
+                            zajęcia w formie konwersatoriów z zagranicznymi lektorami o międzynarodowym doświadczeniu
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-3 text-center h4">
+                        <div class="col-sm-3 text-center h4">
                             <img class="icon" src="img/home_icons/icon2.png" />
                         </div>
-                        <div class="col-md-9 point">
-                            warsztaty odbywają się na ul. Szewskiej 14 w NOVA Centrum Edukacyjne
+                        <div class="col-sm-9 point">
+                            warsztaty odbywają się na ul. Grabowskiego 11 w NOVA Centrum Edukacyjne"
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-3 text-center h4">
+                        <div class="col-sm-3 text-center h4">
                             <img class="icon" src="img/home_icons/icon3.png" />
                         </div>
-                        <div class="col-md-9 point">
+                        <div class="col-sm-9 point">
                             grupy składają się z maksymalnie 15 osób
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-3 text-center h4">
+                        <div class="col-sm-3 text-center h4">
                             <img class="icon" src="img/home_icons/icon4.png" />
                         </div>
-                        <div class="col-md-9 point">
+                        <div class="col-sm-9 point">
                             kursy regularne<br/>
                             8 tygodni, indywidualne i grupowe 2 x 90min / tydzień<br/>
                         </div>
                     </div>
                 </div>
                 <!-- right column -->
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="row">
-                        <div class="col-md-3 text-center h4">
+                        <div class="col-sm-3 text-center h4">
                             <img class="icon" src="img/home_icons/icon5.png" />
                         </div>
-                        <div class="col-md-9 point">
+                        <div class="col-sm-9 point">
                             możliwość wyboru indywidualnego toku nauczania
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 text-center h4">
+                        <div class="col-sm-3 text-center h4">
                             <img class="icon" src="img/home_icons/icon6.png" />
                         </div>
-                        <div class="col-md-9 point">
+                        <div class="col-sm-9 point">
                             w zależności od języka oferujemy zajęcia na poziomach: A1 - C1
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 text-center h4">
+                        <div class="col-sm-3 text-center h4">
                             <img class="icon" src="img/home_icons/icon7.png" />
                         </div>
-                        <div class="col-md-9 point">
+                        <div class="col-sm-9 point">
                             Language Tours - poznaj swojego lektora poza terenem uczelni
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 text-center h4">
+                        <div class="col-sm-3 text-center h4">
                             <img class="icon" src="img/home_icons/icon8.png" />
                         </div>
-                        <div class="col-md-9 point">
+                        <div class="col-sm-9 point">
                             po ukończeniu kursu uczestnik otrzymuje certyfikat językowy
                         </div>
                     </div>
@@ -172,9 +170,9 @@
         </div>
     </div>
     <div class="row" style="margin-top: 20px">
-        <div class="col-md-6 col-md-offset-3 centered text-centered bottom-buttons">
-            <a href="/sign-up"><div class="col-md-5 btn btn-danger">ZAPISZ SIĘ</div></a>
-            <a href="/about"><div class="col-md-5 col-md-offset-1 btn btn-info">DOWIEDZ SIĘ WIĘCEJ</div></a>
+        <div class="col-sm-6 col-sm-offset-3 centered text-centered bottom-buttons">
+            <a href="/sign-up"><div class="col-sm-5 btn btn-danger">ZAPISZ SIĘ</div></a>
+            <a href="/about"><div class="col-sm-5 col-sm-offset-1 btn btn-info">DOWIEDZ SIĘ WIĘCEJ</div></a>
         </div>
     </div>
 {% endblock %}

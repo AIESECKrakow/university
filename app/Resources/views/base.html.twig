@@ -14,19 +14,19 @@
 <body>
 {% block navbar %}
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="navbar-header">
+        <div class="navbar-header col-md-1">
             <a class="navbar-brand" href="/">
                 <img alt="Brand" src="{{ asset('img/logo-black.png') }}" style="height:30px">
             </a>
         </div>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav col-md-2">
             <li>
                 <p class="navbar-text">
                     <a class="navbar-title nav-link" href="/">Warsztaty językowe</a>
                 </p>
             </li>
         </ul>
-        <div class="container">
+        <div class="col-md-9">
             <ul class="nav navbar-nav navbar-right">
                 <li id="sign_up_menu"><a class="nav-link" href="/sign-up">ZAPISZ SIĘ</a></li>
                 <li><a class="nav-link" href="/schedule">HARMONOGRAM</a></li>
@@ -35,6 +35,14 @@
                 <li><a class="nav-link" href="/partners">PARTNERZY</a></li>
                 <li><a class="nav-link" href="/contact">KONTAKT</a></li>
                 <li><a href="https://www.facebook.com/lckrakow" target="_blank"><img src="{{ asset('img/FB-f-Logo__blue_100.png') }}" style="height: 20px;" /></a></li>
+                <li><style>.ig-b- { display: inline-block; }
+                    .ig-b- img { visibility: hidden; }
+                    .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+                    .ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+                    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+                        .ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }</style>
+                <a id="instagram_badge" href="https://www.instagram.com/aiesecuniversity/?ref=badge" class="ig-b- ig-b-32"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
+                </li>
             </ul>
         </div>
     </nav>

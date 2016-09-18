@@ -85,20 +85,23 @@ class SignUpType extends AbstractType
                 'choices' => array(
                     'Nie' => 'Nie',
                     'Tak' => 'Tak',
-                )
+                ),
+                'label' => 'Czy przysługuje Ci zniżka?'
             ))
             ->add('language', EntityType::class, array(
             'class' => 'AppBundle:Language',
             'choice_label' => 'name',
-                'placeholder' => 'wybierz język',
+                'placeholder' => 'Wybierz język',
                 'mapped' => false,
-                'attr' => array('class' => 'selectpicker', 'disabled' =>'true')
+                'attr' => array('class' => 'selectpicker', 'disabled' =>'true'),
+                'label'=> "Język"
             ))
             ->add('city', EntityType::class, array(
                 'class' => 'AppBundle:Group',
                 'choice_label' => 'city',
-                'placeholder' => 'wybierz miasto',
+                'placeholder' => 'Wybierz miasto',
                 'mapped' => false,
+                'label' => 'Miasto',
                 'attr' => array('class' => 'selectpicker'),
                 "query_builder" => function (EntityRepository $er) {
                     return $er->createQueryBuilder('g')
@@ -116,7 +119,7 @@ class SignUpType extends AbstractType
 
                 $form->add('group', EntityType::class, array(
                     'class' => 'AppBundle:Group',
-                    'placeholder' => 'wybierz grupę',
+                    'placeholder' => 'Wybierz grupę',
                     'expanded' => true,
                     'attr' => array('class' => 'radio'),
                     'query_builder' => function (EntityRepository $er) use ($chosen) {

@@ -54,9 +54,6 @@ h1, h2, h3, h4, p {
     margin-top: -20px;
     padding-bottom: 30px;
     min-height: 700px;
-    background: url(../img/bg/bg_5.png) #ffffff top center;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 .logo {
@@ -69,17 +66,32 @@ h1, h2, h3, h4, p {
         margin-top: 100px;
         height: 140px;
     }
+    .content-container {
+        background: url(../img/bg/bg_sm.png) #ffffff top center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }
 @media (min-width: 992px) {
     .logo {
         margin-top: 50px;
         height: 140px;
     }
+    .content-container {
+        background: url(../img/bg/bg_md.png) #ffffff top center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }
 @media (min-width: 1200px) {
     .logo {
         margin-top: 0px;
         height: 140px;
+    }
+    .content-container {
+        background: url(../img/bg/bg_lg.png) #ffffff top center;
+        background-size: cover;
+        background-attachment: fixed;
     }
 }
 
@@ -179,6 +191,13 @@ h1, h2, h3, h4, p {
     background-color: rgba(255, 204, 0, 0.51);
 }
 
+#address-table{
+    text-align: center;
+}
+
+#instagram_badge{
+    top: 9px;
+}
 /*===============================================*/
 
 /*LOADER*/
@@ -407,6 +426,7 @@ fieldset[disabled] .checkbox label {
 
 .control-label{
     display: block;
+    color: white;
 }
 
 
@@ -421,13 +441,12 @@ fieldset[disabled] .checkbox label {
 /*===============================================*/
 .schedule {
     border: 1px solid #a6e1ec;
-    background-color: rgba(0,0,0,0.07);
+    background-color: rgba(255,255,255,0.07);
     border-radius: 10px;
     padding: 10px 10px 10px 10px;
 }
 
 .schedule h4 {
-    color: black;
     font-weight: bold;
 }
 
