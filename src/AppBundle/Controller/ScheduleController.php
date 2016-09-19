@@ -55,7 +55,14 @@ class ScheduleController extends Controller
                     $cities[] = $city;
                 }
 
-                $schedule[] = array('startHour' => $startHour, 'stopHour' => $stopHour, 'weekday' => strtolower($weekday), 'languageName' => $languageName, 'levelName' => $levelName, 'city' => $city, 'group_number' => $groupNumber);
+                $schedule[] = array('startHour' => $startHour,
+                    'stopHour' => $stopHour,
+                    'weekday' => strtolower($weekday),
+                    'languageName' => $languageName,
+                    'languageClassName' => str_replace(" ","_",$languageName),
+                    'levelName' => $levelName,
+                    'city' => $city,
+                    'group_number' => $groupNumber);
             }
 
             //Fetches languages names
@@ -66,7 +73,7 @@ class ScheduleController extends Controller
 
             //Inserts languages names into array
             foreach ($languages as $language) {
-                $languagesNames[] = $language->getName();
+                $languagesNames[str_replace(" ","_",$language->getName())] = $language->getName();
             }
 
             //removes duplicates from an array

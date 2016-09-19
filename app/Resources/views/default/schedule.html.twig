@@ -21,8 +21,8 @@
                         <h3>Wybierz język</h3>
                         <select class="form-control schedule-dropdown">
                             Dynamic generates options
-                            {% for languageName in languagesNames%}
-                                <option value="{{ languageName }}">{{ languageName }}</option>
+                            {% for key, languageName in languagesNames%}
+                                <option value="{{ key }}">{{ languageName }}</option>
                             {% endfor %}
                         </select>
                 </div>
@@ -38,7 +38,7 @@
                         <div class="row">
                             {% for lesson in lessons|sort %}
                                 {% if lesson.weekday == key %}
-                                    <div class="col-md-12 schedule-lesson {{ lesson.languageName }} {{ lesson.levelName }}">
+                                    <div class="col-md-12 schedule-lesson {{ lesson.languageClassName }} {{ lesson.levelName }}">
                                         <p><strong>{{ lesson.levelName }} gr. {{ lesson.group_number }}</strong></p>
                                         <p>{{ lesson.startHour }} - {{ lesson.stopHour }}</p>
                                     </div>

@@ -46,6 +46,7 @@ class LanguagesController extends Controller
                 $level = $er->find($group['level_id']);
                 $g->setLevel($level);
                 $g->setInternalNumber($group['internal_number']);
+                $g->setCity($group['city']);
                 $g->setCapacity($group['capacity']);
                 $g->setEnabled($group['g_enabled']);
                 $g->setLanguage($lng);
