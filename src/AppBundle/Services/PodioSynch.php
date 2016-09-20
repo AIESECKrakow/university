@@ -49,7 +49,8 @@ class PodioSynch
         //the most awful part of the app, needs to be changed
 
         foreach ($students as $student) {
-            if ($student->getGroup()->getCity() == 'krakow') {
+            if (strtolower($student->getGroup()->getCity()) === 'krakow'
+             or strtolower($student->getGroup()->getCity()) === 'kraków') {
                 $students_krk[] = $student;
             } else {
                 $students_exp[] = $student;
@@ -74,7 +75,7 @@ class PodioSynch
             $surname = $student->getLastName();
             $phone = $student->getPhone();
             $email = $student->getEmail();
-            $group = $student->getGroup()->getId() . $student->getGroup()->getLevel();
+            $group = $student->getGroup()->getLevel() . $student->getGroup()->getInternalNumber();
             $language = $student->getGroup()->getLanguage()->getName();
             $attended = $student->getDiscount();
             $fields = new PodioItemFieldCollection(array(

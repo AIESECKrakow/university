@@ -58,6 +58,17 @@ function getDescription(language){
                                 same = 1;
                                 console.log(key + " / " + k + " -> " + result[key][k]['day'] + " " + result[key][k]['hour']);
                                 var tempday = result[key][k]['day'];
+                                if(tempday == "Monday"){
+                                    tempday = "Poniedziałek";
+                                } else if (tempday == "Tuesday"){
+                                    tempday = "Wtorek"
+                                } else if (tempday == "Wednesday"){
+                                    tempday = "Środa"
+                                } else if (tempday == "Thursday"){
+                                    tempday = "Czwartek"
+                                } else {
+                                    tempday = "Piątek"
+                                }
                                 var temphour = result[key][k]['hour'];
                                 lessons += '<div class="row_info">' + tempday + " \- " + temphour + '</div>'
                             }

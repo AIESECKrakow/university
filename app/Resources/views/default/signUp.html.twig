@@ -2,6 +2,9 @@
 {% block title %}Zarejestruj się na warsztaty językowe AIESEC University{% endblock %}
 
 {% block body %}
+    {% set start = '2016-09-21'|date('Y-m-d') %}
+    {% set today =  'now'|date('Y-m-d')%}
+    {% if start <= today %}
     <div class="container" id="form">
         <h2>Zarejestruj się</h2>
         {{ form_start(form) }}
@@ -54,4 +57,9 @@
 
         {{ form_end(form) }}
     </div>
+        {% else %}
+        <div class="col-md-offset-1 col-md-10" style="text-align: center">
+            <h1>Zapisy ruszają już {{ start|date('d.m') }}. Zapraszamy!</h1>
+        </div>
+        {% endif %}
 {% endblock %}

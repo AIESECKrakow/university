@@ -22,7 +22,7 @@ class LanguagesController extends Controller
     public function addLanguagesAction()
     {
         //generates an array with languages from xml file
-        $languagesGenerator = new LanguageGenerator(__DIR__ . '\..\Config\languages.xml');
+        $languagesGenerator = new LanguageGenerator(__DIR__ . '/../Config/languages.xml');
         $languages = $languagesGenerator->getLanguages();
         $em = $this->getDoctrine()->getManager();
         $er = $this->getDoctrine()->getRepository('AppBundle:Level');

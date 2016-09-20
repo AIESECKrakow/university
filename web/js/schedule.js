@@ -16,8 +16,6 @@ $(document).ready(function() {
 
     languageName = city + "-" + languageName;
 
-    console.log(languageName);
-
    $('.'+languageName).show();
    $('div.schedule-lesson:not(.'+languageName+')').hide();
 
