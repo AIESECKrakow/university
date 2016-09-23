@@ -72,7 +72,7 @@ h1, h2, h3, h4, p {
         background-attachment: fixed;
     }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .logo {
         margin-top: 50px;
         height: 140px;
@@ -399,6 +399,7 @@ fieldset[disabled] .checkbox label {
     border: 1px solid #a6e1ec;
     background-color: rgba(0,0,0,0.07);
     border-radius: 10px;
+    color: white;
 }
 
 .required{
@@ -408,8 +409,8 @@ fieldset[disabled] .checkbox label {
 .group_info{
     float: right;
     margin-left: 20px;
-    margin-right: 210px;
-    margin-top: 10px;
+    margin-right: 50px;
+    margin-top: 20px;
     font-weight: bolder;
     margin-bottom: 10px;
 }

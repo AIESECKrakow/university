@@ -19,7 +19,6 @@ $language.change(function() {
     // Simulate form data, but only include the selected sport value.
     var data = {};
     data[$language.attr('name')] = $language.val();
-    console.log(data);
 
     // Submit data via AJAX to the form's action path.
     $.ajax({
@@ -41,7 +40,7 @@ $language.change(function() {
 
 function getDescription(language){
 
-    var lessonCall = '/getLessons/' + language;
+    var lessonCall = '/university/web/getLessons/' + language;
     var lessons;
     $.ajax ({
         url: lessonCall,
@@ -56,7 +55,6 @@ function getDescription(language){
                         if (result[key].hasOwnProperty(k)){
                             if(result[key][k]['city'] == selected_city) {
                                 same = 1;
-                                console.log(key + " / " + k + " -> " + result[key][k]['day'] + " " + result[key][k]['hour']);
                                 var tempday = result[key][k]['day'];
                                 if(tempday == "Monday"){
                                     tempday = "Poniedziałek";

@@ -50,7 +50,14 @@
                 {% endfor %}
             </div>
                 {% else %}
-                <div class="col-md-8 col-md-offset-1" style="text-align: center">
+                <div class="row">
+                <h3>Wybierz miasto</h3>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default btn-city" value="krakow">Kraków</button>
+                    <button type="button" class="btn btn-default btn-city active" value="nowy_sacz">Nowy Sącz</button>
+                </div>
+            </div>
+                <div class="col-md-10 col-md-offset-1" style="text-align: center">
                     <h2>Przepraszamy, AIESEC University będzie dostępny w innych miastach w edycji wiosennej.</h2>
                 </div>
                 {% endif %}

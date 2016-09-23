@@ -1,6 +1,3 @@
-/**
- * Created by Patryk on 02.09.2016.
- */
 $(document).ready(function() {
    var languageName = $('.schedule-dropdown').val();
 

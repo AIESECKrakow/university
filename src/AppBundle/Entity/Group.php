@@ -262,7 +262,7 @@ class Group
 
     public function __toString()
     {
-        return (string)$this->getLevel() . "gr. " . $this->internal_number;
+        return (string)$this->getLevel() . " gr. " . $this->internal_number;
     }
 
     /**
@@ -341,4 +341,5 @@ class Group
     {
         return $this->internal_number;
     }
+
 }
