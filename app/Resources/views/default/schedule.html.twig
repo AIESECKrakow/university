@@ -7,13 +7,12 @@
         </div>
 
         {% if city is defined %}
-            {% if city == 'krakow' %}
             <div class="row" id="schedule-menu-row">
                 <div class="col-sm-5 col-sm-offset-1">
                     <h3>Wybierz miasto</h3>
                     <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default btn-city {% if city == 'krakow' %}active{% endif %}" value="krakow">Kraków</button>
-                        <button type="button" class="btn btn-default btn-city {% if city == 'nowy_sacz' %}active{% endif %}" value="nowy_sacz">Nowy Sącz</button>
+                        <button type="button" class="btn btn-default btn-city {% if city == 'tarnow' %}active{% endif %}" value="tarnow">Tarnów</button>
                     </div>
                 </div>
 
@@ -49,24 +48,12 @@
                     </div>
                 {% endfor %}
             </div>
-                {% else %}
-                <div class="row">
-                <h3>Wybierz miasto</h3>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default btn-city" value="krakow">Kraków</button>
-                    <button type="button" class="btn btn-default btn-city active" value="nowy_sacz">Nowy Sącz</button>
-                </div>
-            </div>
-                <div class="col-md-10 col-md-offset-1" style="text-align: center">
-                    <h2>Przepraszamy, AIESEC University będzie dostępny w innych miastach w edycji wiosennej.</h2>
-                </div>
-                {% endif %}
         {% else %}
             <div class="row">
                 <h3>Wybierz miasto</h3>
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-default btn-city" value="krakow">Kraków</button>
-                    <button type="button" class="btn btn-default btn-city" value="nowy_sacz">Nowy Sącz</button>
+                    <button type="button" class="btn btn-default btn-city" value="tarnow">Tarnów</button>
                 </div>
             </div>
         {% endif %}

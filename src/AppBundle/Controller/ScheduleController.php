@@ -40,8 +40,8 @@ class ScheduleController extends Controller
                 $weekday = $lesson->getWeekday();
                 $tmp = '';
 
-                if($lesson->getGroup()->getCity() === 'Nowy Sącz'){
-                    $tmp = 'nowy_sacz';
+                if($lesson->getGroup()->getCity() === 'Tarnów'){
+                    $tmp = 'tarnow';
                 } else{
                     $tmp = 'krakow';
                 }
